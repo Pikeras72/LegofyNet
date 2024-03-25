@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subir imagen</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+</head>
+<body>
+    <h1>Subir imagen para el modelo de IA</h1>
+    <form id="upload-form">
+        <input type="file" id="image-upload" accept="image/*">
+        <select id="class-select">
+            <option value="Anakin Skywalker">Anakin Skywalker</option>
+            <option value="Calamari">Calamari</option>
+            <option value="Darth Vader">Darth Vader</option>
+            <option value="Ewok">Ewok</option>
+            <option value="Han Solo">Han Solo</option>
+            <option value="Humano">Humano</option>
+            <option value="Jawa">Jawa</option>
+            <option value="Luke Skywalker">Luke Skywalker</option>
+            <option value="Mace Windu">Mace Windu</option>
+            <option value="Mandaloriano">Mandaloriano</option>
+            <option value="Obi Wan Kenobi">Obi Wan Kenobi</option>
+            <option value="Oficial Imperial">Oficial Imperial</option>
+            <option value="Piloto Resistencia">Piloto Resistencia</option>
+            <option value="SnowTrooper">SnowTrooper</option>
+            <option value="Soldado Imperial">Soldado Imperial</option>
+            <option value="Soldado Resistencia">Soldado Resistencia</option>
+            <option value="StormTrooper">StormTrooper</option>
+            <option value="Togruta">Togruta</option>
+            <option value="Twilek">Twilek</option>
+            <option value="Wookiee">Wookiee</option>
+            <option value="Yoda">Yoda</option>
+            <option value="Zabrak">Zabrak</option>
+        </select> 
+        <button type="submit">Generar imagen</button>
+    </form>
+    <canvas id="output-canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
