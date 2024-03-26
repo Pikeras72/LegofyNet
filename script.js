@@ -1,6 +1,6 @@
 let model;
 async function loadModel() {
-    model = await tf.loadLayersModel('modelo/model.json');
+    model = await tf.loadLayersModel('../modelo/model.json');
 }
 loadModel();
 
@@ -30,8 +30,8 @@ document.getElementById('upload-form').addEventListener('submit', async function
                 imgTensor = imgTensor.expandDims(0);
 
                 // Obtener la clase seleccionada y convertirla a one-hot encoding
-                let classSelect = document.getElementById('class-select');
-                let selectedClass = classSelect.options[classSelect.selectedIndex].value;
+                const urlParams = new URLSearchParams(window.location.search);
+                const selectedClass = urlParams.get('class');
                 let classes = ['Anakin Skywalker', 'Calamari', 'Darth Vader', 'Ewok', 'Han Solo', 'Humano', 'Jawa', 'Luke Skywalker', 'Mace Windu', 'Mandaloriano', 'Obi Wan Kenobi', 'Oficial Imperial', 'Piloto Resistencia', 'SnowTrooper', 'Soldado Imperial', 'Soldado Resistencia', 'StormTrooper', 'Togruta', 'Twilek', 'Wookiee', 'Yoda', 'Zabrak'];
                 let labelIndex = classes.indexOf(selectedClass);
                 let labelTensor = tf.oneHot(labelIndex, classes.length).reshape([1, classes.length]);

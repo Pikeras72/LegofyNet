@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Subir imagen</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <title>LegofyNet</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>Subir imagen para el modelo de IA</h1>
-    <form id="upload-form">
-        <input type="file" id="image-upload" accept="image/*">
-        <select id="class-select">
-            <option value="Anakin Skywalker">Anakin Skywalker</option>
-            <option value="Calamari">Calamari</option>
-            <option value="Darth Vader">Darth Vader</option>
-            <option value="Ewok">Ewok</option>
-            <option value="Han Solo">Han Solo</option>
-            <option value="Humano">Humano</option>
-            <option value="Jawa">Jawa</option>
-            <option value="Luke Skywalker">Luke Skywalker</option>
-            <option value="Mace Windu">Mace Windu</option>
-            <option value="Mandaloriano">Mandaloriano</option>
-            <option value="Obi Wan Kenobi">Obi Wan Kenobi</option>
-            <option value="Oficial Imperial">Oficial Imperial</option>
-            <option value="Piloto Resistencia">Piloto Resistencia</option>
-            <option value="SnowTrooper">SnowTrooper</option>
-            <option value="Soldado Imperial">Soldado Imperial</option>
-            <option value="Soldado Resistencia">Soldado Resistencia</option>
-            <option value="StormTrooper">StormTrooper</option>
-            <option value="Togruta">Togruta</option>
-            <option value="Twilek">Twilek</option>
-            <option value="Wookiee">Wookiee</option>
-            <option value="Yoda">Yoda</option>
-            <option value="Zabrak">Zabrak</option>
-        </select> 
-        <button type="submit">Generar imagen</button>
-    </form>
-    <canvas id="output-canvas"></canvas>
-    <script src="script.js"></script>
+    <header>
+        <div>
+            <a href="index.html"><img class="logo" src="favicon.ico" alt="LegofyNet"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Opción 1</a></li>
+                <li><a href="#">Opción 2</a></li>
+                <li><a href="#">Opción 3</a></li>
+                <!-- Añade más opciones según sea necesario -->
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Genera tu imagen con IA</h1>
+        <div class="grid">
+            <div class="grid-item" onclick="location.href='classeshtmls/anakinskywalker.html?class=Anakin Skywalker'">Anakin Skywalker</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/calamari.html?class=Calamari'">Calamari</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/darthvader.html?class=Darth Vader'">Darth Vader</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/ewok.html?class=Ewok'">Ewok</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/hansolo.html?class=Han Solo'">Han Solo</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/humano.html?class=Humano'">Humano</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/jawa.html?class=Jawa'">Jawa</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/lukeskywalker.html?class=Luke Skywalker'">Luke Skywalker</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/macewindu.html?class=Mace Windu'">Mace Windu</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/mandaloriano.html?class=Mandaloriano'">Mandaloriano</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/obiwankenobi.html?class=Obi Wan Kenobi'">Obi Wan Kenobi</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/oficialimperial.html?class=Oficial Imperial'">Oficial Imperial</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/pilotoresistencia.html?class=Piloto Resistencia'">Piloto Resistencia</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/snowtrooper.html?class=SnowTrooper'">SnowTrooper</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/soldadoimperial.html?class=Soldado Imperial'">Soldado Imperial</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/soldadoresistencia.html?class=Soldado Resistencia'">Soldado Resistencia</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/stormtrooper.html?class=StormTrooper'">StormTrooper</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/togruta.html?class=Togruta'">Togruta</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/twilek.html?class=Twilek'">Twilek</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/wookiee.html?class=Wookiee'">Wookiee</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/yoda.html?class=Yoda'">Yoda</div>
+            <div class="grid-item" onclick="location.href='classeshtmls/zabrak.html?class=Zabrak'">Zabrak</div>
+        </div>
+        <canvas id="output-canvas"></canvas>
+    </div>
 </body>
 </html>
