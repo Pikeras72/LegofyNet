@@ -28,22 +28,15 @@ The images were categorized into different classes based on their type. The trai
 
 For example, given this image and selecting the class `Calamari`:
 
-![ArdoBarodai](https://github.com/Pikeras72/LegofyNet/assets/90858639/588ecaea-0792-4393-9413-23804ff5a772)
-
-The model predicted this:
-
-![image](https://github.com/Pikeras72/LegofyNet/assets/90858639/ff27e42f-2cf3-4ee5-bd56-0daed0188b46)
-
+|**Selected Image:**|**Generated Image:**|
+|-------------------|--------------------|
+|<img src="https://github.com/Pikeras72/LegofyNet/assets/90858639/588ecaea-0792-4393-9413-23804ff5a772" width="300" height="400">| <img src="https://github.com/Pikeras72/LegofyNet/assets/90858639/ff27e42f-2cf3-4ee5-bd56-0daed0188b46" width="200" height="400">|
 
 Another example, given this image and selecting the class `Yoda`:
 
-![51WsWJ76ibL _AC_UY1000_](https://github.com/Pikeras72/LegofyNet/assets/90858639/aa7c357a-36d7-4609-ab52-e6e8852582c0)
-
-
-The model predicted this:
-
-![image](https://github.com/Pikeras72/LegofyNet/assets/90858639/b7a285a1-94da-4125-8d4a-1e931d2e1d67)
-
+|**Selected Image:**|**Generated Image:**|
+|-------------------|--------------------|
+|<img src="https://github.com/Pikeras72/LegofyNet/assets/90858639/aa7c357a-36d7-4609-ab52-e6e8852582c0" width="200" height="425">| <img src="https://github.com/Pikeras72/LegofyNet/assets/90858639/b7a285a1-94da-4125-8d4a-1e931d2e1d67" width="200" height="400">|
 
 ---
  
@@ -55,7 +48,7 @@ The model predicted this:
 ### 3. Versioning
  #### Update [25/03/2024]
 
-**Version 0.1.1** is out! This version includes the following:
+**Version 0.1** is out! This version includes the following:
 
 -  Model trained with *`128x64`px* images.
 -  Very simple interface just to try the functionality of the model.
@@ -73,13 +66,45 @@ Future Improvements:
 -  Improve interface (nav bar, favicon.ico, multiple HTMLs for each class, credits, help section, etc.).
 -  Upload a new and better model that generates images with higher quality.
 -  Increase the size of the image shown on the web page.
+
+#### Update [26/03/2024]
+
+**Version 0.2** now available! New changes added:
+
+-  New HTMLs pages for each class.
+-  LegofyNet logo and favicon.ico added to the web page.
+-  Nav bar included.
+-  If you want to generate an image you just have to click on the corresponding class name and you will be redirected to a page where you can generate images of the selected class.
+
+ Weak points:
+
+-  The nav bar is empty, no options are available.
+-  The interface is better but still very poor. Needs more animations and eye-catching elements.
+-  There are some js problems in production when trying to generate the first image, related to the model 'predict' method. (Not always occurs).
   
+Future Improvements:
+
+-   Correct the 'model.predict' error.
+-   Add the version of the project in the webpage.
+-   Improve interface (animations, images, interactive elements, etc.).
+-   Upload a new and better model that generates images with higher quality.
+-   Increase the size of the image shown on the web page.
+-   Make the web responsive.
+
+---
   
 [Go up⬆️](#top)
  
 <a name="technologies"></a>
 ### 4. Technologies
 
+`TensorFlow`, `TensorFlow.Keras` and `TensorFlow.js` for the model training, the model structure and implementing the model in the web page.
+
+`HTML`, `CSS` and `JavaScript` for the web page design and functionality.
+
+`Netlify` for hosting the web page for free.
+
+`Microsoft Copilot` for the initial structure (HTML, CSS and JS) of the web page and the implementation of the model on the web page via TensorFlow.js.
 
 ---
  
@@ -89,13 +114,14 @@ Future Improvements:
 ### 5. Bibliography
 
 
+
  ---
  
 [Go up⬆️](#top)
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](LICENSE)
 
 ## Made by
 
