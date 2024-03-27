@@ -4,6 +4,8 @@
 # LegofyNet - Generate Lego images with AI
 **Pix2Pix multiclass** structure for generating Lego figures from real images. 
 
+**Access the website here:** https://legofynet.netlify.app
+
 ## Table of contents
 * [Description](#description)
 * [Visuals](#visuals)
