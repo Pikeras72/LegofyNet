@@ -13,11 +13,11 @@
  
 <a name="description"></a>
 ### 1. Description
-This project comes from an inspiration from the `Generative Methods` subject at the Polytechnic University of Madrid in 2023 where we developed the first version of this project via a normal Pix2Pix implementation. This reposityory contains the continuity of the project implementing a new `Pix2Pix multiclass structure` where you can select your desired class to generete. I have been trying this new Pix2Pix approach for some time and it provides `more accuarate and realistic` images than a normal Pix2Pix implementation for generating Lego figures from real world images (oriented to the `Star Wars Universe`). This is the first project I have seen with this type of structure.
+This project stems from inspiration found in the `Generative Methods` subject at the Polytechnic University of Madrid in 2023, where we initially developed the first version using a standard Pix2Pix implementation. This repository represents the continuation of the project, implementing a new `Pix2Pix multiclass structure` allowing users to select their desired class for generation. I have been experimenting with this new Pix2Pix approach for some time, and it yields `more accuarate and realistic` images compared to a standard Pix2Pix implementation for generating Lego figures from real-world images (focused on the `Star Wars Universe`). This is the first project I have encountered with this type of structure.
 
-The dataset was created via webscrapping and it was modified and cleaned afterwards. All the images used for training were *128x64*px and `.png` format.
+The dataset was created through web scraping and subsequently modified and cleaned. All training images were *128x64*px and in `.png` format.
 
-The images were separated into different categories according to the type they corresponded to. The trainingset was composed of `2328 images`.
+The images were categorized into different classes based on their type. The training set comprised `2328 images`.
 
 ---
  
@@ -48,6 +48,8 @@ The model predicted this:
 ---
  
 [Go up⬆️](#top)
+
+
  
 <a name="versioning"></a>
 ### 3. Versioning
@@ -57,8 +59,39 @@ The model predicted this:
 
 -  Model trained with *`128x64`px* images.
 -  Very simple interface just to try the functionality of the model.
--  Deployment of the web page in netlify: https://legofynet.netlify.app
+-  Deployment of the web page on Netlify: https://legofynet.netlify.app
 -  Allows users to upload an image, select a class and generate their image.
+
+Weak points:
+
+- The interface is very poor as it is only a prototype.
+- Users should not have to choose the class every time if they want to generate multiple images from the same category.
+- The image shown on the web page is very small, making it hard to appreciate.
+  
+Future Improvements:
+
+-  Improve interface (nav bar, favicon.ico, multiple HTMLs for each class, credits, help section, etc.).
+-  Upload a new and better model that generates images with higher quality.
+-  Increase the size of the image shown on the web page.
+  
+  
+[Go up⬆️](#top)
+ 
+<a name="technologies"></a>
+### 4. Technologies
+
+
+---
+ 
+[Go up⬆️](#top)
+
+<a name="bibliography"></a>
+### 5. Bibliography
+
+
+ ---
+ 
+[Go up⬆️](#top)
 
 ## License
 
