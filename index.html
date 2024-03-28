@@ -3,6 +3,7 @@
 <head>
     <title>LegofyNet</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
 </head>
 <body>
     <header>
@@ -44,7 +45,13 @@
             <div class="grid-item" onclick="location.href='classeshtmls/yoda.html?class=Yoda'">Yoda</div>
             <div class="grid-item" onclick="location.href='classeshtmls/zabrak.html?class=Zabrak'">Zabrak</div>
         </div>
+        <h1>Subir imagen para el modelo de IA</h1>
+        <form id="upload-form">
+            <input type="file" id="image-upload" accept="image/*">
+            <button type="submit">Generar imagen</button>
+        </form>
         <canvas id="output-canvas"></canvas>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
