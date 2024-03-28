@@ -1,6 +1,8 @@
 let model;
 async function loadModel() {
     model = await tf.loadLayersModel('modelo/model.json');
+    console.log(typeof model);
+    console.log("Modelo conseguido");
 }
 loadModel();
 
