@@ -1,10 +1,8 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1e2c56ef-5136-4b17-af53-6c53023dc125/deploy-status)](https://app.netlify.com/sites/legofynet/deploys)
-
 <a name="top"></a>
 # LegofyNet - Generate Lego images with AI
 **Pix2Pix multiclass** structure for generating Lego figures from real images. 
 
-**Access the website here:** https://legofynet.netlify.app
+**Access the website here:** https://pikeras72.github.io/LegofyNet/
 
 ## Table of contents
 * [Description](#description)
@@ -54,7 +52,7 @@ Another example, given this image and selecting the class `Yoda`:
 
 -  Model trained with *`128x64`px* images.
 -  Very simple interface just to try the functionality of the model.
--  Deployment of the web page on Netlify: https://legofynet.netlify.app
+-  Deployment of the web page on Netlify.
 -  Allows users to upload an image, select a class and generate their image.
 
 Weak points:
@@ -104,7 +102,7 @@ Future Improvements:
 
 `HTML`, `CSS` and `JavaScript` for the web page design and functionality.
 
-`Netlify` for hosting the web page for free.
+`Github Pages` for hosting the web page for free.
 
 `Microsoft Copilot` for the initial structure (HTML, CSS and JS) of the web page and the implementation of the model on the web page via TensorFlow.js.
 
