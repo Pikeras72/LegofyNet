@@ -25,7 +25,7 @@ document.getElementById('upload-form').addEventListener('submit', async function
 
                 // Convertir la imagen a un tensor y normalizarla
                 let imgTensor = tf.browser.fromPixels(canvas).div(255);
-
+                console.log('Imagen conseguida');
                 // Agregar una dimensión extra al principio del tensor
                 imgTensor = imgTensor.expandDims(0);
 
@@ -35,10 +35,10 @@ document.getElementById('upload-form').addEventListener('submit', async function
                 let classes = ['Anakin Skywalker', 'Calamari', 'Darth Vader', 'Ewok', 'Han Solo', 'Humano', 'Jawa', 'Luke Skywalker', 'Mace Windu', 'Mandaloriano', 'Obi Wan Kenobi', 'Oficial Imperial', 'Piloto Resistencia', 'SnowTrooper', 'Soldado Imperial', 'Soldado Resistencia', 'StormTrooper', 'Togruta', 'Twilek', 'Wookiee', 'Yoda', 'Zabrak'];
                 let labelIndex = classes.indexOf(selectedClass);
                 let labelTensor = tf.oneHot(labelIndex, classes.length).reshape([1, classes.length]);
-
+                console.log('Etiqueta conseguida');
                 // Pasar la imagen y la etiqueta al modelo
                 let outputs = model.predict([imgTensor, labelTensor]);
-
+                console.log('Predict conseguido');
                 // Seleccionar la salida que quieres mostrar
                 let output = outputs[2];
 
