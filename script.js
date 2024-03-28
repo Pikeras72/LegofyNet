@@ -1,6 +1,6 @@
 let model;
 async function loadModel() {
-    model = await tf.loadLayersModel('LegofyNet/modelo/model.json');
+    model = await tf.loadLayersModel('modelo/model.json');
 }
 loadModel();
 
