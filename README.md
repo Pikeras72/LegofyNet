@@ -1,5 +1,5 @@
 <a name="top"></a>
-# LegofyNet - Generate Lego images with AI
+# LegofyNet - Generate Lego images with AI (Multiclass Pix2Pix)
 **Pix2Pix multiclass** structure for generating Lego figures from real images. 
 
 **Access the website here:** https://pikeras72.github.io/LegofyNet/
@@ -13,7 +13,7 @@
  
 <a name="description"></a>
 ### 1. Description
-This project stems from inspiration found in the `Generative Methods` subject at the Polytechnic University of Madrid in 2023, where we initially developed the first version using a standard Pix2Pix implementation. This repository represents the continuation of the project, implementing a new `Pix2Pix multiclass structure` allowing users to select their desired class for generation. I have been experimenting with this new Pix2Pix approach for some time, and it yields `more accuarate and realistic` images compared to a standard Pix2Pix implementation for generating Lego figures from real-world images (focused on the `Star Wars Universe`). This is the first project I have encountered with this type of structure.
+This project stems from inspiration found in the `Generative Methods` subject at the Polytechnic University of Madrid in 2023, where we initially developed the first version using a standard **Pix2Pix implementation**. This repository represents the continuation of the project, implementing a new **`Pix2Pix multiclass structure`** allowing users to select their desired class for generation. I have been experimenting with this new Pix2Pix approach for some time, and it yields **more accuarate and realistic** images compared to a standard Pix2Pix implementation for generating Lego figures from real-world images (focused on the `Star Wars Universe`). This is the first project I have encountered with this type of structure.
 
 The dataset was created through web scraping and subsequently modified and cleaned. All training images were *128x64*px and in `.png` format.
 
@@ -42,11 +42,9 @@ Another example, given this image and selecting the class `Yoda`:
  
 [Go up⬆️](#top)
 
-
- 
 <a name="versioning"></a>
 ### 3. Versioning
- #### Update [25/03/2024]
+ #### <Update [25/03/2024]>
 
 **Version 0.1** is out! This version includes the following:
 
@@ -63,11 +61,11 @@ Weak points:
   
 Future Improvements:
 
--  Improve interface (nav bar, favicon.ico, multiple HTMLs for each class, credits, help section, etc.).
--  Upload a new and better model that generates images with higher quality.
--  Increase the size of the image shown on the web page.
+-  Improve interface (nav bar, favicon.ico, multiple HTMLs for each class, credits, help section, etc.). ([#11](https://github.com/Pikeras72/LegofyNet/issues/11))
+-  Upload a new and better model that generates images with higher quality. ([#9](https://github.com/Pikeras72/LegofyNet/issues/9))
+-  Increase the size of the image shown on the web page. ([#4](https://github.com/Pikeras72/LegofyNet/issues/4))
 
-#### Update [26/03/2024]
+#### <Update [26/03/2024]>
 
 **Version 0.2** now available! New changes added:
 
@@ -84,12 +82,33 @@ Future Improvements:
   
 Future Improvements:
 
--   Correct the 'model.predict' error.
--   Add the version of the project in the webpage.
--   Improve interface (animations, images, interactive elements, etc.).
--   Upload a new and better model that generates images with higher quality.
--   Increase the size of the image shown on the web page.
--   Make the web responsive.
+-   Correct the 'model.predict' error. ([#1](https://github.com/Pikeras72/LegofyNet/issues/1))
+-   Add the version of the project in the webpage. ([#13](https://github.com/Pikeras72/LegofyNet/issues/13))
+-   Make the web responsive. ([#12](https://github.com/Pikeras72/LegofyNet/issues/12))
+
+#### <Update [25/04/2024]>
+
+**Version 0.3** is here! New changes added:
+
+-   Dark and Light mode available.
+-   Version number added to the webpage.
+-   'model.predict' error detected.   
+
+ Weak points:
+
+-  The 'model.predict' error is due to the loadModel() function if the user try to generate an image too quick. 
+-  The webpage initialize in Dark mode, but the button shows as it was Light mode.
+-  The model is loaded in all of the webpages of the different classes, making the user experience slower.
+
+Future Improvements:
+
+-   Since I'm a student, I'm still learning new things and I recently learned the importance of creating new branches for each feature and not always deploying to the main branch. (How had I not realized this before) (×﹏×) 
+-   Complete the fix for the 'model.predict' error. ([#1](https://github.com/Pikeras72/LegofyNet/issues/1))
+-   Initialize the Dark/Light mode button to Dark. ([#7](https://github.com/Pikeras72/LegofyNet/issues/7))
+-   Pass the model payload to a global variable, as well as the version number. ([#8](https://github.com/Pikeras72/LegofyNet/issues/8))
+-   Generate the images with and appropriate decoration and surroundings. ([#5](https://github.com/Pikeras72/LegofyNet/issues/5))
+-   Add details to the squares of each class at the initial page to better identify the class. ([#6](https://github.com/Pikeras72/LegofyNet/issues/6))
+-   Complete the Nav Bar sections (About, Credits, The Model, etc.). ([#10](https://github.com/Pikeras72/LegofyNet/issues/10))
 
 ---
   
@@ -113,7 +132,11 @@ Future Improvements:
 <a name="bibliography"></a>
 ### 5. Bibliography
 
+Isola, P., Zhu, J. Y., Zhou, T., & Efros, A. A. (2016). [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004). arXiv.
 
+pix2pix: Image-to-image translation with a conditional GAN. (n.d.). [TensorFlow](https://www.tensorflow.org/tutorials/generative/pix2pix).
+
+Brownlee, J. (2021, April 29). [How to Implement Pix2Pix GAN Models From Scratch With Keras](https://machinelearningmastery.com/how-to-implement-pix2pix-gan-models-from-scratch-with-keras/). MachineLearningMastery.com.
 
  ---
  
