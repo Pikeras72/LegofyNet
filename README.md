@@ -18,10 +18,10 @@ This project stems from inspiration found in the `Generative Methods` subject at
 The dataset was created through web scraping and subsequently modified and cleaned. All training images were *128x64*px and in `.png` format.
 
 The images were categorized into different classes based on their type. The training set comprised `2328 images`.
-
----
  
 [Go up⬆️](#top)
+
+---
 
 <a name="visuals"></a>
 ### 2. Visuals
@@ -37,10 +37,10 @@ Another example, given this image and selecting the class `Yoda`:
 |**Selected Image:**|**Generated Image:**|
 |-------------------|--------------------|
 |<img src="https://github.com/Pikeras72/LegofyNet/assets/90858639/aa7c357a-36d7-4609-ab52-e6e8852582c0" width="200" height="425">| <img src="https://github.com/Pikeras72/LegofyNet/assets/90858639/b7a285a1-94da-4125-8d4a-1e931d2e1d67" width="200" height="400">|
-
----
  
 [Go up⬆️](#top)
+
+---
 
 <a name="versioning"></a>
 ### 3. Versioning
@@ -102,17 +102,17 @@ Future Improvements:
 
 Future Improvements:
 
--   Since I'm a student, I'm still learning new things and I recently learned the importance of creating new branches for each feature and not always deploying to the main branch. (How had I not realized this before) (×﹏×) 
+-   Since I'm a student, I'm still learning new things and I recently learned the importance of creating new branches for each feature and not always deploying to the main branch. (How had I not realized this before...) (×﹏×) 
 -   Complete the fix for the 'model.predict' error. ([#1](https://github.com/Pikeras72/LegofyNet/issues/1))
 -   Initialize the Dark/Light mode button to Dark. ([#7](https://github.com/Pikeras72/LegofyNet/issues/7))
 -   Pass the model payload to a global variable, as well as the version number. ([#8](https://github.com/Pikeras72/LegofyNet/issues/8))
 -   Generate the images with and appropriate decoration and surroundings. ([#5](https://github.com/Pikeras72/LegofyNet/issues/5))
 -   Add details to the squares of each class at the initial page to better identify the class. ([#6](https://github.com/Pikeras72/LegofyNet/issues/6))
 -   Complete the Nav Bar sections (About, Credits, The Model, etc.). ([#10](https://github.com/Pikeras72/LegofyNet/issues/10))
-
----
   
 [Go up⬆️](#top)
+
+---
  
 <a name="technologies"></a>
 ### 4. Technologies
@@ -123,11 +123,11 @@ Future Improvements:
 
 `Github Pages` for hosting the web page for free.
 
-`Microsoft Copilot` for the initial structure (HTML, CSS and JS) of the web page and the implementation of the model on the web page via TensorFlow.js.
+`Microsoft Copilot` for the initial structure (HTML, CSS and JS) of the web page and the implementation of the model on the web page via `TensorFlow.js`.
+
+[Go up⬆️](#top)
 
 ---
- 
-[Go up⬆️](#top)
 
 <a name="bibliography"></a>
 ### 5. Bibliography
@@ -138,9 +138,9 @@ pix2pix: Image-to-image translation with a conditional GAN. (n.d.). [TensorFlow]
 
 Brownlee, J. (2021, April 29). [How to Implement Pix2Pix GAN Models From Scratch With Keras](https://machinelearningmastery.com/how-to-implement-pix2pix-gan-models-from-scratch-with-keras/). MachineLearningMastery.com.
 
- ---
- 
 [Go up⬆️](#top)
+
+---
 
 ## License
 
