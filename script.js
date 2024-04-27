@@ -1,5 +1,4 @@
 async function main() {
-    // Llamada a la función para cargar el modelo
     const model = await tf.loadLayersModel('../modelo/model.json');
     console.log("Modelo cargado");
 
