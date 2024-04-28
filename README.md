@@ -1,3 +1,11 @@
+[![GitHub Pages Status](https://img.shields.io/website?label=Website%20Status&url=https%3A%2F%2Fpikeras72.github.io%2FLegofyNet%2F)](https://pikeras72.github.io/LegofyNet/)
+![Static Badge](https://img.shields.io/badge/Version-0.3-blue)
+[![License](https://img.shields.io/github/license/Pikeras72/LegofyNet?label=License)](https://github.com/Pikeras72/LegofyNet/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/Pikeras72/LegofyNet?label=Issues)](https://github.com/Pikeras72/LegofyNet/issues)
+[![GitHub repo size](https://img.shields.io/github/repo-size/Pikeras72/LegofyNet?label=Repo%20Size)](https://github.com/Pikeras72/LegofyNet)
+
+
+
 <a name="top"></a>
 # LegofyNet - Generate Lego images with AI (Multiclass Pix2Pix)
 **Pix2Pix multiclass** structure for generating Lego figures from real images. 
