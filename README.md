@@ -1,5 +1,5 @@
 [![GitHub Pages Status](https://img.shields.io/website?label=Website%20Status&url=https%3A%2F%2Fpikeras72.github.io%2FLegofyNet%2F)](https://pikeras72.github.io/LegofyNet/)
-![Static Badge](https://img.shields.io/badge/Version-0.3-blue)
+![Static Badge](https://img.shields.io/badge/Version-0.4-blue)
 [![License](https://img.shields.io/github/license/Pikeras72/LegofyNet?label=License)](https://github.com/Pikeras72/LegofyNet/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/Pikeras72/LegofyNet?label=Issues)](https://github.com/Pikeras72/LegofyNet/issues)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Pikeras72/LegofyNet?label=Repo%20Size)](https://github.com/Pikeras72/LegofyNet)
@@ -113,10 +113,38 @@ Future Improvements:
 -   Since I'm a student, I'm still learning new things and I recently learned the importance of creating new branches for each feature and not always deploying to the main branch. (How had I not realized this before...) (×﹏×) 
 -   Complete the fix for the 'model.predict' error. ([#1](https://github.com/Pikeras72/LegofyNet/issues/1))
 -   Initialize the Dark/Light mode button to Dark. ([#7](https://github.com/Pikeras72/LegofyNet/issues/7))
--   Pass the model payload to a global variable, as well as the version number. ([#8](https://github.com/Pikeras72/LegofyNet/issues/8))
+-   Pass the version number to a global variable. ([#8](https://github.com/Pikeras72/LegofyNet/issues/8))
 -   Generate the images with and appropriate decoration and surroundings. ([#5](https://github.com/Pikeras72/LegofyNet/issues/5))
 -   Add details to the squares of each class at the initial page to better identify the class. ([#6](https://github.com/Pikeras72/LegofyNet/issues/6))
 -   Complete the Nav Bar sections (About, Credits, The Model, etc.). ([#10](https://github.com/Pikeras72/LegofyNet/issues/10))
+
+#### <Update [29/04/2024]>
+
+**Version 0.4** just landed! New changes added:
+
+-   Improved Dark/Light button and themes.
+-   Model loading errors fixed.
+-   The generated images are a bit bigger.
+-   Version number now is much easier to change.
+-   Drag&Drop system for uploading files.
+
+ Weak points:
+
+-   When Draging a file to the Drag&Drop section, it automatically start generating the Lego image, instead, it might be good to show the name of the selected file and a small image of it so the user knows what file they have selected.
+-   After having uploaded a file, a 'Generate Image' button should appear in order to generate a new image.
+-   Sometimes the user faces the situation where the model is not completely loaded yet. Until it's loaded, they can not select a file, buit they do not know that it is due to the model still loading. There should be a loading bar or a notification for them to know what is happening.
+-   The code have some variables or comments is Spanish that should be changed to English.
+-   The Dark/Light mode selection should be saved at the LocalSession so we could maintain the selected option through all the pages.
+-   There should be a text that indicates the name of the class you are generating in each page.
+  
+Future Improvements:
+
+-   Show the name of the file and it's image once uploaded. ([#18](https://github.com/Pikeras72/LegofyNet/issues/18))
+-   Show a 'Generate button' after having uploaded an image. ([#19](https://github.com/Pikeras72/LegofyNet/issues/19))
+-   Notify the user that the model is still loading until it's completely loaded. ([#20](https://github.com/Pikeras72/LegofyNet/issues/20))
+-   Translate the whole project to English. ([#21](https://github.com/Pikeras72/LegofyNet/issues/21))
+-   Improve the black/light mode. ([#22](https://github.com/Pikeras72/LegofyNet/issues/22))
+-   Indicate with a text the class that corresponds to each page. ([#23](https://github.com/Pikeras72/LegofyNet/issues/23))
   
 [Go up⬆️](#top)
 
