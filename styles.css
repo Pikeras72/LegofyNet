@@ -87,6 +87,11 @@ h1 {
   font-weight: bold;
 }
 
+#output-canvas {
+  width: 96px;
+  height: 192px;
+}
+
 #darkmode-label {
   width:125px;
   height:50px;
