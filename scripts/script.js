@@ -59,13 +59,20 @@ async function main() {
                 canvas.width = 64;
                 canvas.height = 128;
                 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-
+    
                 // Convertir la imagen a un tensor y normalizarla
                 let imgTensor = tf.browser.fromPixels(canvas).div(255);
                 console.log('Imagen conseguida');
                 // Agregar una dimensión extra al principio del tensor
                 imgTensor = imgTensor.expandDims(0);
-
+    
+                // Mostrar el nombre del archivo y la imagen cargada
+                document.getElementById('drop-text').style.display = 'none';
+                document.getElementById('output-text').style.display = 'block';
+                document.getElementById('file-info').style.display = 'block';
+                document.getElementById('file-name').textContent = file.name;
+                document.getElementById('file-preview').src = e.target.result;
+    
                 // Obtener la clase seleccionada y convertirla a one-hot encoding
                 const urlParams = new URLSearchParams(window.location.search);
                 const selectedClass = urlParams.get('class');
@@ -78,16 +85,16 @@ async function main() {
                 console.log('Predict conseguido');
                 // Seleccionar la salida que quieres mostrar
                 let output = outputs[2];
-
+    
                 // Ajustar los valores de la imagen al rango [0, 1]
                 output = output.clipByValue(0, 1);
-
+    
                 // Mostrar la imagen generada en el canvas de salida
                 let outputCanvas = document.getElementById('output-canvas');
                 await tf.browser.toPixels(output.squeeze(), outputCanvas);
             };
         };
         reader.readAsDataURL(file);
-    }
+    }    
 }
 main();
