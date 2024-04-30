@@ -48,8 +48,13 @@ h1 {
     color: #fff;
     font-size: 24px;
     font-weight: 700;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 20px;
+}
+h2 {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 100px;
 }
 .grid {
     display: flex;
@@ -147,6 +152,7 @@ h1 {
   width: 350px;
   height: 200px;
   margin: 20px auto;
+  margin-bottom: 50px;
   text-align: center;
   line-height: 40px;
   font-size: 20px;

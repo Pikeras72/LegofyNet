@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const gridItems = document.querySelectorAll('.grid-item');
     const navItems = document.querySelectorAll('nav ul li a');
     const headerItems = document.querySelectorAll('header');
-    const textItems = document.querySelectorAll('#code-version, h1');
+    const textItems = document.querySelectorAll('#code-version, h1, h2');
     const DandDItems = document.querySelectorAll('#drop-area');
     const browseItems = document.querySelectorAll('#file-label');
 
