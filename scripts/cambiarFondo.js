@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const textItems = document.querySelectorAll('#code-version, h1, h2');
     const DandDItems = document.querySelectorAll('#drop-area');
     const browseItems = document.querySelectorAll('#file-label');
+    const generateButtonItems = document.querySelectorAll('#generate-button');
 
     // Función para cambiar los estilos
     function toggleDarkMode() {
@@ -33,6 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
             browseItems.forEach(browseItem => {
                 browseItem.style.backgroundColor = '#777';
             });
+            generateButtonItems.forEach(generateButtonItem => {
+                generateButtonItem.style.setProperty('--primary', '150, 150, 150');
+                generateButtonItem.style.setProperty('--secondary', '61, 61, 61');
+            });
+            
         } else {
             body.style.backgroundColor = '#fff';
             gridItems.forEach(item => {
@@ -56,6 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
             browseItems.forEach(browseItem => {
                 browseItem.style.backgroundColor = '#0075cf ';
             });
+            generateButtonItems.forEach(generateButtonItem => {
+                generateButtonItem.style.setProperty('--primary', '64, 168, 247');
+                generateButtonItem.style.setProperty('--secondary', '41, 108, 158');
+            });            
         }
     }
     toggleDarkMode();
