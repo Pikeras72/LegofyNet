@@ -183,6 +183,9 @@ h2 {
   margin-top: 50px;
   font-size: 15px;
 }
+#model-loading-container{
+  margin-top: 75px;
+}
 #output-canvas-container {
   display: flex;
   align-items: center;
