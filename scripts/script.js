@@ -1,6 +1,9 @@
 async function main() {
     const model = await tf.loadLayersModel('../modelo/model.json');
     console.log("Modelo cargado");
+    document.getElementById('model-loading-message').style.display = 'none';
+    document.getElementById('file-label').style.display = 'block';
+    document.getElementById('drop-text').style.display = 'block';
 
     // Drag and Drop event listeners
     let dropArea = document.getElementById('drop-area');
