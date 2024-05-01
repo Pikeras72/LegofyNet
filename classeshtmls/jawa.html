@@ -29,16 +29,14 @@
         <h2>Selected Class: <i>Jawa</i></h2>
         <h1>Upload Image for the AI model</h1>
         <div id="drop-area">
-            <p id="drop-text" style="margin-top: 45px;">Drop a file here</p>
+            <p id="drop-text" style="margin-top: 45px; display: none;">Drop a file here</p>
             <div id="file-info" style="display: none;">
                 <img id="file-preview" style="max-width: 100px;">
                 <p id="file-name"></p>
             </div>
-            <label for="file-input" id="file-label">Browse File</label>
+            <label for="file-input" id="file-label" style="display: none;">Browse File</label>
             <input type="file" id="file-input" accept="image/*">
-        </div>
-        <div id="model-loading-container" style="display: none;">
-            <h2>AI model is loading, wait a few seconds and retry...</h2>
+            <p id="model-loading-message" style="padding: 50px;">The AI model is loading...</p>
         </div>
         <div id="generate-button-container">
             <button id="generate-button" style="display: none;">

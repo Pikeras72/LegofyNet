@@ -1,9 +1,9 @@
 async function main() {
-    let isModelLoaded = false;
-
     const model = await tf.loadLayersModel('../modelo/model.json');
     console.log("Modelo cargado");
-    isModelLoaded = true;
+    document.getElementById('model-loading-message').style.display = 'none';
+    document.getElementById('file-label').style.display = 'block';
+    document.getElementById('drop-text').style.display = 'block';
 
     // Drag and Drop event listeners
     let dropArea = document.getElementById('drop-area');
@@ -40,11 +40,6 @@ async function main() {
         let files = dt.files;
     
         if (files.length > 0) {
-            if (!isModelLoaded) {
-                document.getElementById('model-loading-container').style.display = 'block';
-                return;
-            }
-            document.getElementById('model-loading-container').style.display = 'none';
             document.getElementById('output-canvas-container').style.display = 'none';
             let file = files[0];
             document.getElementById('generate-button').style.display = 'block';
@@ -65,11 +60,6 @@ async function main() {
     }
 
     document.getElementById('file-input').addEventListener('change', async function(event) {
-        if (!isModelLoaded) {
-            document.getElementById('model-loading-container').style.display = 'block';
-            return;
-        }
-        document.getElementById('model-loading-container').style.display = 'none';
         document.getElementById('output-canvas-container').style.display = 'none';
         var file = event.target.files[0];
         document.getElementById('generate-button').style.display = 'block';
