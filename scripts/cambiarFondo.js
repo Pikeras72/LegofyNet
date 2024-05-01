@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const DandDItems = document.querySelectorAll('#drop-area');
     const browseItems = document.querySelectorAll('#file-label');
     const generateButtonItems = document.querySelectorAll('#generate-button');
+    const outputCanvasItems = document.querySelectorAll('#output-canvas-container');
 
     // Función para cambiar los estilos
     function toggleDarkMode() {
@@ -38,7 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 generateButtonItem.style.setProperty('--primary', '150, 150, 150');
                 generateButtonItem.style.setProperty('--secondary', '61, 61, 61');
             });
-            
+            outputCanvasItems.forEach(outputCanvasItem => {
+                outputCanvasItem.style.boxShadow = "0 0 10px rgba(255, 255, 255, 0.5)"
+                outputCanvasItem.style.backgroundColor = '#444';
+                outputCanvasItem.style.border = '2px solid #fff';
+            });
         } else {
             body.style.backgroundColor = '#fff';
             gridItems.forEach(item => {
@@ -65,7 +70,12 @@ document.addEventListener('DOMContentLoaded', function() {
             generateButtonItems.forEach(generateButtonItem => {
                 generateButtonItem.style.setProperty('--primary', '64, 168, 247');
                 generateButtonItem.style.setProperty('--secondary', '41, 108, 158');
-            });            
+            });      
+            outputCanvasItems.forEach(outputCanvasItem => {
+                outputCanvasItem.style.boxShadow = "0 0 15px rgba(0, 0, 0, 0.5)"
+                outputCanvasItem.style.backgroundColor = '#00b3ff';
+                outputCanvasItem.style.border = '2px solid #555555';
+            });      
         }
     }
     toggleDarkMode();
