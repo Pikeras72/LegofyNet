@@ -42,14 +42,13 @@ nav ul li a {
     position: absolute;
     max-width: 600px;
     margin: 0 auto;
-    top: 150px;
+    top: 175px;
     text-align: center;
 }
 h1 {
     color: #fff;
     font-size: 24px;
     font-weight: 700;
-    margin-top: 50px;
     margin-bottom: 20px;
 }
 h2 {
@@ -95,9 +94,10 @@ h2 {
 #output-canvas {
   width: 96px;
   height: 192px;
+  padding: 15px;
 }
 #output-text{
-  margin-top: 40px;
+  margin-bottom: 15px;
 }
 
 #darkmode-label {
@@ -171,7 +171,8 @@ h2 {
   color: #fff;
   border-radius: 10px;
   cursor: pointer;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  margin-top: 15px;
   transition: background-color 0.3s;
 }
 #file-label:hover {
@@ -179,12 +180,37 @@ h2 {
 }
 #file-info {
   margin: 20px;
-  margin-top: 30px;
+  margin-top: 50px;
   font-size: 15px;
 }
 #output-canvas-container {
-  margin: 30px;
-  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding-bottom: 25px;
+  padding-top: 5px; 
+  padding-left: 15px; 
+  padding-right: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  max-width: 175px; 
+  margin: auto;
+  margin-bottom: 200px;
+  margin-top: 30px;
+  background-color: #444;
+  position: relative;
+}
+#output-canvas-wrapper {
+  position: relative;
+  width: 126px;
+  height: 222px;
+  margin-left: 25px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+#generate-button-container{
+  margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: center;

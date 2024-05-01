@@ -37,8 +37,7 @@ async function main() {
         let files = dt.files;
     
         if (files.length > 0) {
-            document.getElementById('output-text').style.display = 'none';
-            document.getElementById('output-canvas').style.display = 'none';
+            document.getElementById('output-canvas-container').style.display = 'none';
             let file = files[0];
             document.getElementById('generate-button').style.display = 'block';
             document.getElementById('drop-text').style.display = 'none';
@@ -58,8 +57,7 @@ async function main() {
     }
 
     document.getElementById('file-input').addEventListener('change', async function(event) {
-        document.getElementById('output-text').style.display = 'none';
-        document.getElementById('output-canvas').style.display = 'none';
+        document.getElementById('output-canvas-container').style.display = 'none';
         var file = event.target.files[0];
         document.getElementById('generate-button').style.display = 'block';
         document.getElementById('drop-text').style.display = 'none';
@@ -89,7 +87,7 @@ async function main() {
                 canvas.width = 64;
                 canvas.height = 128;
                 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-    
+                
                 // Convertir la imagen a un tensor y normalizarla
                 let imgTensor = tf.browser.fromPixels(canvas).div(255);
                 console.log('Imagen conseguida');
@@ -115,6 +113,8 @@ async function main() {
                 // Mostrar la imagen generada en el canvas de salida
                 let outputCanvas = document.getElementById('output-canvas');
                 outputCanvas.style.display = 'block';
+                
+                document.getElementById('output-canvas-container').style.display = 'block';
                 await tf.browser.toPixels(output.squeeze(), outputCanvas);
             };
         };
