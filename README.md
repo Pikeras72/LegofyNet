@@ -1,5 +1,5 @@
 [![GitHub Pages Status](https://img.shields.io/website?label=Website%20Status&url=https%3A%2F%2Fpikeras72.github.io%2FLegofyNet%2F)](https://pikeras72.github.io/LegofyNet/)
-![Static Badge](https://img.shields.io/badge/Version-0.4-blue)
+![Static Badge](https://img.shields.io/badge/Version-0.5-blue)
 [![License](https://img.shields.io/github/license/Pikeras72/LegofyNet?label=License)](https://github.com/Pikeras72/LegofyNet/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/Pikeras72/LegofyNet?label=Issues)](https://github.com/Pikeras72/LegofyNet/issues)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Pikeras72/LegofyNet?label=Repo%20Size)](https://github.com/Pikeras72/LegofyNet)
@@ -145,6 +145,24 @@ Future Improvements:
 -   Translate the whole project to English. ([#21](https://github.com/Pikeras72/LegofyNet/issues/21))
 -   Improve the black/light mode. ([#22](https://github.com/Pikeras72/LegofyNet/issues/22))
 -   Indicate with a text the class that corresponds to each page. ([#23](https://github.com/Pikeras72/LegofyNet/issues/23))
+
+#### <Update [02/05/2024]>
+
+**Version 0.5** has arrived! New changes added:
+
+-   Preview of the name and image of the file uploaded by the user.
+-   The button to generate an image from the uploaded file is now available.
+-   Each web page displays the class that the user has selected.
+-   The generated images now have decorations around them.
+-   Until the model is not completely loaded, the user is not allowed to upload a file.
+
+ Weak points:
+
+-   It could be easier for the users if they could download the generated image by clicking on a button.
+  
+Future Improvements:
+
+-   Add a 'Download' button in case the user wants to save the generated image. ([#31](https://github.com/Pikeras72/LegofyNet/issues/31))
   
 [Go up⬆️](#top)
 
@@ -157,9 +175,9 @@ Future Improvements:
 
 `HTML`, `CSS` and `JavaScript` for the web page design and functionality.
 
-`Github Pages` for hosting the web page for free.
+`Github Pages` for hosting the web page.
 
-`Microsoft Copilot` for the initial structure (HTML, CSS and JS) of the web page and the implementation of the model on the web page via `TensorFlow.js`.
+`ChatGPT-3.5` for the initial structure (HTML, CSS and JS) of the web page, the implementation of the model via `TensorFlow.js` in the web page and questions during the development of the project.
 
 [Go up⬆️](#top)
 
