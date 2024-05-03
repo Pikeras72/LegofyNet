@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const browseItems = document.querySelectorAll('#file-label');
     const generateButtonItems = document.querySelectorAll('#generate-button');
     const outputCanvasItems = document.querySelectorAll('#output-canvas-container');
+    const downloadButtonItems = document.querySelectorAll('#download-button');
 
     // Función para cambiar los estilos
     function toggleDarkMode() {
@@ -40,9 +41,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 generateButtonItem.style.setProperty('--secondary', '61, 61, 61');
             });
             outputCanvasItems.forEach(outputCanvasItem => {
-                outputCanvasItem.style.boxShadow = "0 0 10px rgba(255, 255, 255, 0.5)"
+                outputCanvasItem.style.boxShadow = "0 0 7.5px rgba(255, 255, 255, 0.5)"
                 outputCanvasItem.style.backgroundColor = '#444';
                 outputCanvasItem.style.border = '2px solid #fff';
+            });
+            downloadButtonItems.forEach(downloadButtonItem => {
+                downloadButtonItem.style.boxShadow = "0 0 7.5px #999"
+                downloadButtonItem.style.backgroundColor = '#444';
+                downloadButtonItem.style.border = '2px solid #333';
             });
         } else {
             body.style.backgroundColor = '#fff';
@@ -72,10 +78,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 generateButtonItem.style.setProperty('--secondary', '41, 108, 158');
             });      
             outputCanvasItems.forEach(outputCanvasItem => {
-                outputCanvasItem.style.boxShadow = "0 0 15px rgba(0, 0, 0, 0.5)"
+                outputCanvasItem.style.boxShadow = "0 0 7.5px rgba(0, 0, 0, 0.5)"
                 outputCanvasItem.style.backgroundColor = '#00b3ff';
                 outputCanvasItem.style.border = '2px solid #555555';
             });      
+            downloadButtonItems.forEach(downloadButtonItem => {
+                downloadButtonItem.style.boxShadow = "0 0 7.5px #222"
+                downloadButtonItem.style.backgroundColor = '#0075cf';
+                downloadButtonItem.style.border = '2px solid #0053cf';
+            });
         }
     }
     toggleDarkMode();
@@ -117,6 +128,32 @@ document.addEventListener('DOMContentLoaded', function() {
                 browseItem.style.backgroundColor = '#777';
             } else {
                 browseItem.style.backgroundColor = '#0075cf';
+            }
+        });
+    });
+
+    downloadButtonItems.forEach(downloadButtonItem => {
+        downloadButtonItem.addEventListener('mouseenter', function() {
+            if (checkbox.checked) {
+                downloadButtonItem.style.boxShadow = "0 0 7.5px #fff"
+                downloadButtonItem.style.backgroundColor = '#333';
+                downloadButtonItem.style.border = '2px solid #222';
+            } else {
+                downloadButtonItem.style.backgroundColor = '#0053cf';
+                downloadButtonItem.style.border = '2px solid #00398f';
+                downloadButtonItem.style.boxShadow = "0 0 7.5px #000"
+            }
+        });
+
+        downloadButtonItem.addEventListener('mouseleave', function() {
+            if (checkbox.checked) {
+                downloadButtonItem.style.boxShadow = "0 0 7.5px #999"
+                downloadButtonItem.style.backgroundColor = '#444';
+                downloadButtonItem.style.border = '2px solid #333';
+            } else {
+                downloadButtonItem.style.boxShadow = "0 0 7.5px #222"
+                downloadButtonItem.style.backgroundColor = '#0075cf';
+                downloadButtonItem.style.border = '2px solid #0053cf';
             }
         });
     });
