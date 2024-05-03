@@ -189,11 +189,11 @@ h2 {
   flex-direction: column;
   border: 2px solid #fff;
   border-radius: 10px;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
   padding-top: 5px; 
   padding-left: 15px; 
   padding-right: 15px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 7.5px rgba(255, 255, 255, 0.5);
   max-width: 175px; 
   margin: auto;
   margin-bottom: 200px;
@@ -208,6 +208,21 @@ h2 {
   margin-left: 25px;
   background-color: #fff;
   border-radius: 10px;
+}
+#download-button{
+  cursor: pointer;
+  border: 2px solid #333;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: #444;
+  box-shadow: 0 0 7.5px #999;
+  padding: 5px 8px;
+  transition: 0.15s;
+}
+#download-button:hover{
+  background-color: #333;
+  border: 2px solid #222;
+  box-shadow: 0 0 7.5px #fff;
 }
 #generate-button-container{
   margin-top: 30px;

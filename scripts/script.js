@@ -5,6 +5,9 @@ async function main() {
     document.getElementById('file-label').style.display = 'block';
     document.getElementById('drop-text').style.display = 'block';
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedClass = urlParams.get('class');
+
     // Drag and Drop event listeners
     let dropArea = document.getElementById('drop-area');
 
@@ -97,9 +100,6 @@ async function main() {
                 // Agregar una dimensión extra al principio del tensor
                 imgTensor = imgTensor.expandDims(0);
                 document.getElementById('output-text').style.display = 'block';
-                // Obtener la clase seleccionada y convertirla a one-hot encoding
-                const urlParams = new URLSearchParams(window.location.search);
-                const selectedClass = urlParams.get('class');
                 let classes = ['Anakin Skywalker', 'Calamari', 'Darth Vader', 'Ewok', 'Han Solo', 'Humano', 'Jawa', 'Luke Skywalker', 'Mace Windu', 'Mandaloriano', 'Obi Wan Kenobi', 'Oficial Imperial', 'Piloto Resistencia', 'SnowTrooper', 'Soldado Imperial', 'Soldado Resistencia', 'StormTrooper', 'Togruta', 'Twilek', 'Wookiee', 'Yoda', 'Zabrak'];
                 let labelIndex = classes.indexOf(selectedClass);
                 let labelTensor = tf.oneHot(labelIndex, classes.length).reshape([1, classes.length]);
@@ -122,6 +122,15 @@ async function main() {
             };
         };
         reader.readAsDataURL(file);
-    }    
+    }
+
+    const downloadButton = document.getElementById('download-button');
+    downloadButton.addEventListener('click', function() {
+        const canvas = document.getElementById('output-canvas');
+        const link = document.createElement('a');
+        link.download = selectedClass+' AI Image.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    });
 }
 main();
