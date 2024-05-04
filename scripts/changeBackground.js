@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const outputCanvasItems = document.querySelectorAll('#output-canvas-container');
     const downloadButtonItems = document.querySelectorAll('#download-button');
 
-    // Función para cambiar los estilos
     function toggleDarkMode() {
         if (checkbox.checked) {
             body.style.backgroundColor = '#333';
@@ -94,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleDarkMode();
     });
 
-    // Cambiar el color de fondo en el evento hover:
+    // Changes in the 'hover' event:
     gridItems.forEach(item => {
         item.addEventListener('mouseenter', function() {
             if (checkbox.checked) {

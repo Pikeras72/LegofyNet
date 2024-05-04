@@ -1,6 +1,6 @@
 async function main() {
-    const model = await tf.loadLayersModel('../modelo/model.json');
-    console.log("Modelo cargado");
+    const model = await tf.loadLayersModel('../model/model.json');
+    console.log("Model Loaded");
     document.getElementById('model-loading-message').style.display = 'none';
     document.getElementById('file-label').style.display = 'block';
     document.getElementById('drop-text').style.display = 'block';
@@ -8,7 +8,7 @@ async function main() {
     const urlParams = new URLSearchParams(window.location.search);
     const selectedClass = urlParams.get('class');
 
-    // Drag and Drop event listeners
+    // Drop area event listeners
     let dropArea = document.getElementById('drop-area');
 
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
@@ -87,36 +87,37 @@ async function main() {
             var img = new Image();
             img.src = e.target.result;
             img.onload = async function() {
-                // Crear un canvas para redimensionar la imagen
+
+                // Create a canvas for the output image
                 let canvas = document.createElement('canvas');
                 let ctx = canvas.getContext('2d');
                 canvas.width = 64;
                 canvas.height = 128;
                 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
                 
-                // Convertir la imagen a un tensor y normalizarla
+                // Transform the image into a tensor and normalize it
                 let imgTensor = tf.browser.fromPixels(canvas).div(255);
-                console.log('Imagen conseguida');
-                // Agregar una dimensión extra al principio del tensor
+                console.log('Image obtained');
+
                 imgTensor = imgTensor.expandDims(0);
                 document.getElementById('output-text').style.display = 'block';
-                let classes = ['Anakin Skywalker', 'Calamari', 'Darth Vader', 'Ewok', 'Han Solo', 'Humano', 'Jawa', 'Luke Skywalker', 'Mace Windu', 'Mandaloriano', 'Obi Wan Kenobi', 'Oficial Imperial', 'Piloto Resistencia', 'SnowTrooper', 'Soldado Imperial', 'Soldado Resistencia', 'StormTrooper', 'Togruta', 'Twilek', 'Wookiee', 'Yoda', 'Zabrak'];
+                let classes = ['Anakin Skywalker', 'Calamari', 'Darth Vader', 'Ewok', 'Han Solo', 'Human', 'Jawa', 'Luke Skywalker', 'Mace Windu', 'Mandalorian', 'Obi Wan Kenobi', 'Imperial Officer', 'Resistance Pilot', 'SnowTrooper', 'Imperial Soldier', 'Resistance Soldier', 'StormTrooper', 'Togruta', 'Twilek', 'Wookiee', 'Yoda', 'Zabrak'];
                 let labelIndex = classes.indexOf(selectedClass);
                 let labelTensor = tf.oneHot(labelIndex, classes.length).reshape([1, classes.length]);
-                console.log('Etiqueta conseguida');
-                // Pasar la imagen y la etiqueta al modelo
+                console.log('Label obtained');
+
                 let outputs = await model.predict([imgTensor, labelTensor]);
-                console.log('Predict conseguido');
-                // Seleccionar la salida que quieres mostrar
+                console.log('Predict obtained');
+
+                // Select the exact output to show
                 let output = outputs[2];
     
-                // Ajustar los valores de la imagen al rango [0, 1]
+                // Adjust the image values between [0, 1]
                 output = output.clipByValue(0, 1);
     
-                // Mostrar la imagen generada en el canvas de salida
+                // Show the image in the output canvas
                 let outputCanvas = document.getElementById('output-canvas');
                 outputCanvas.style.display = 'block';
-                
                 document.getElementById('output-canvas-container').style.display = 'block';
                 await tf.browser.toPixels(output.squeeze(), outputCanvas);
             };
