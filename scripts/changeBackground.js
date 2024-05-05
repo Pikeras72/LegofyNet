@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const generateButtonItems = document.querySelectorAll('#generate-button');
     const outputCanvasItems = document.querySelectorAll('#output-canvas-container');
     const downloadButtonItems = document.querySelectorAll('#download-button');
+    const aboutItems = document.querySelectorAll('#about-container');
 
     function toggleDarkMode() {
         if (checkbox.checked) {
@@ -49,6 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 downloadButtonItem.style.backgroundColor = '#444';
                 downloadButtonItem.style.border = '2px solid #333';
             });
+            aboutItems.forEach(aboutItem => {
+                aboutItem.style.color = "white";
+            });
         } else {
             body.style.backgroundColor = '#fff';
             gridItems.forEach(item => {
@@ -85,6 +89,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 downloadButtonItem.style.boxShadow = "0 0 7.5px #222"
                 downloadButtonItem.style.backgroundColor = '#0075cf';
                 downloadButtonItem.style.border = '2px solid #0053cf';
+            });
+            aboutItems.forEach(aboutItem => {
+                aboutItem.style.color = "black";
             });
         }
     }
