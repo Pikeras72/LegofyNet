@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const generateButtonItems = document.querySelectorAll('#generate-button');
     const outputCanvasItems = document.querySelectorAll('#output-canvas-container');
     const downloadButtonItems = document.querySelectorAll('#download-button');
-    const aboutItems = document.querySelectorAll('#about-container');
+    const aboutItems = document.querySelectorAll('#about-container, #diego-image-description');
+    const diegoImageItems = document.querySelectorAll('#diego-image');
 
     function toggleDarkMode() {
         if (checkbox.checked) {
@@ -52,6 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             aboutItems.forEach(aboutItem => {
                 aboutItem.style.color = "white";
+                aboutItem.style.backgroundColor = '#444';
+            });
+            diegoImageItems.forEach(diegoImageItem => {
+                diegoImageItem.style.boxShadow = "0 0 25px #000"
             });
         } else {
             body.style.backgroundColor = '#fff';
@@ -92,6 +97,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             aboutItems.forEach(aboutItem => {
                 aboutItem.style.color = "black";
+                aboutItem.style.backgroundColor = '#4dbaff';
+            });
+            diegoImageItems.forEach(diegoImageItem => {
+                diegoImageItem.style.boxShadow = "0 0 25px #133245"
             });
         }
     }
