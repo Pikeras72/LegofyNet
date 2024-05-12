@@ -32,11 +32,12 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 50px;
 }
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 .container {
     position: absolute;
@@ -338,4 +339,15 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#rive-canvas{
+  width: 800px;
+  height: 800px;
+}
+
+#disc-structure-container{
+  background-color: white;
+  padding: 3px;
+  border-radius: 10px;
 }
