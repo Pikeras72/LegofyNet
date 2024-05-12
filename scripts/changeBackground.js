@@ -10,9 +10,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const generateButtonItems = document.querySelectorAll('#generate-button');
     const outputCanvasItems = document.querySelectorAll('#output-canvas-container');
     const downloadButtonItems = document.querySelectorAll('#download-button');
+    const aboutItems = document.querySelectorAll('#about-container, #image-description');
+    const diegoImageItems = document.querySelectorAll('#image');
+    const aboutProjectLinkItems = document.querySelectorAll('#project-link');
 
     function toggleDarkMode() {
         if (checkbox.checked) {
+            if(document.getElementById("rive-canvas") !== null){
+                const r = new rive.Rive({
+                    src: '../rivanimations/blackrivanimation.riv',
+                    canvas: document.getElementById("rive-canvas"),
+                    autoplay: true,
+                    stateMachines: "State Machine 1",
+                    onLoad: () => {
+                      r.resizeDrawingSurfaceToCanvas();
+                    },
+                });
+            }
             body.style.backgroundColor = '#333';
             gridItems.forEach(item => {
                 item.style.backgroundColor = '#555';
@@ -49,7 +63,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 downloadButtonItem.style.backgroundColor = '#444';
                 downloadButtonItem.style.border = '2px solid #333';
             });
+            aboutItems.forEach(aboutItem => {
+                aboutItem.style.color = "white";
+                aboutItem.style.backgroundColor = '#444';
+            });
+            diegoImageItems.forEach(diegoImageItem => {
+                diegoImageItem.style.boxShadow = "0 0 20px #000"
+            });
+            aboutProjectLinkItems.forEach(aboutProjectLinkItem => {
+                aboutProjectLinkItem.style.color = "white"
+            });
         } else {
+            if(document.getElementById("rive-canvas") !== null){
+                const r = new rive.Rive({
+                    src: '../rivanimations/lightrivanimation.riv',
+                    canvas: document.getElementById("rive-canvas"),
+                    autoplay: true,
+                    stateMachines: "State Machine 1",
+                    onLoad: () => {
+                      r.resizeDrawingSurfaceToCanvas();
+                    },
+                });
+            }
             body.style.backgroundColor = '#fff';
             gridItems.forEach(item => {
                 item.style.backgroundColor = '#00b3ff';
@@ -86,11 +121,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 downloadButtonItem.style.backgroundColor = '#0075cf';
                 downloadButtonItem.style.border = '2px solid #0053cf';
             });
+            aboutItems.forEach(aboutItem => {
+                aboutItem.style.color = "black";
+                aboutItem.style.backgroundColor = '#4dbaff';
+            });
+            diegoImageItems.forEach(diegoImageItem => {
+                diegoImageItem.style.boxShadow = "0 0 20px #133245"
+            });
+            aboutProjectLinkItems.forEach(aboutProjectLinkItem => {
+                aboutProjectLinkItem.style.color = "black"
+            });
         }
     }
     toggleDarkMode();
     checkbox.addEventListener('change', function() {
         toggleDarkMode();
+    });
+
+    window.addEventListener('beforeunload', function() {
+        if (typeof riveInstance !== 'undefined' && riveInstance !== null) {
+            riveInstance.cleanup();
+        }
     });
 
     // Changes in the 'hover' event:
