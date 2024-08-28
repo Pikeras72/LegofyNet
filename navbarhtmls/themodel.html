@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <title>LegofyNet</title>
     <script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('beforeunload', function() {
+                if (typeof riveInstance !== 'undefined' && riveInstance !== null) {
+                    riveInstance.cleanup();
+                }
+            });
+            const r = new rive.Rive({
+                src: '../rivanimations/blackrivanimation.riv',
+                canvas: document.getElementById("rive-canvas"),
+                autoplay: true,
+                stateMachines: "State Machine 1",
+                onLoad: () => {
+                  r.resizeDrawingSurfaceToCanvas();
+                },
+            });
+        });
+    </script>
     <link rel="stylesheet" type="text/css" href="../styles.css">
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
 </head>
@@ -21,10 +39,6 @@
             </ul>
         </nav>
     </header>
-    <div id="darkmode-toggle-container">
-        <input type="checkbox" id="darkmode-toggle" checked/>
-        <label id="darkmode-label" for="darkmode-toggle"></label>
-    </div>   
     <div>
         
     </div>
@@ -56,7 +70,6 @@
         </div>
     </div>
     <div id="code-version"></div>
-    <script src="../scripts/changeBackground.js"></script>
     <script src="../scripts/codeVersion.js"></script>
 </body>
 </html>
