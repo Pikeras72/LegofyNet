@@ -1,4 +1,4 @@
-var codeVersion = "0.5";
+var codeVersion = "0.6";
 
 document.addEventListener("DOMContentLoaded", function() {
     var versionElement = document.getElementById("code-version");

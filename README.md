@@ -1,5 +1,5 @@
 [![GitHub Pages Status](https://img.shields.io/website?label=Website%20Status&url=https%3A%2F%2Fpikeras72.github.io%2FLegofyNet%2F)](https://pikeras72.github.io/LegofyNet/)
-![Static Badge](https://img.shields.io/badge/Version-0.5-blue)
+![Static Badge](https://img.shields.io/badge/Version-0.6-blue)
 [![License](https://img.shields.io/github/license/Pikeras72/LegofyNet?label=License)](https://github.com/Pikeras72/LegofyNet/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/Pikeras72/LegofyNet?label=Issues)](https://github.com/Pikeras72/LegofyNet/issues)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Pikeras72/LegofyNet?label=Repo%20Size)](https://github.com/Pikeras72/LegofyNet)
@@ -163,6 +163,33 @@ Future Improvements:
 Future Improvements:
 
 -   Add a 'Download' button in case the user wants to save the generated image. ([#31](https://github.com/Pikeras72/LegofyNet/issues/31))
+
+#### <Update [29/08/2024]>
+
+**Version 0.6** is out! New changes added:
+
+-   Now the entire project (including the code) is in English, yay!
+-   A button to download the generated image was added correctly.
+-   The navigation bar options are complete with useful and interesting information. Check it out!
+-   Issue [#22](https://github.com/Pikeras72/LegofyNet/issues/22) has been abandoned because I cannot resolve the related issue. Instead, this issue has been replaced for now by [#35](https://github.com/Pikeras72/LegofyNet/issues/35).
+  
+ Weak points:
+
+-   I think the website logo could be considerably improved to something simpler.
+-   There should be a gallery section in the navigation bar so people can see some examples of generated and original images.
+-   Add a 'FAQ' section in the navigation bar in case anyone has questions about how the model works, who made it, how it works, etc.
+-   Add a 'Terms of Service and Privacy Policy' section in the navigation bar explaining in detail the objectives, operation and scope of this project.
+-   Allow only .pdf or .jpg elements to be dragged or selected to generate model images to avoid problems or errors when generating images.
+-   Check which image the model takes as input to generate the image, sometimes if you put an image to generate and then change it, sometimes it shows you the generation of the previous image.
+  
+Future Improvements:
+
+-   Improve the Logo of the webpage. ([#37](https://github.com/Pikeras72/LegofyNet/issues/37))
+-   Add a 'Gallery' section in the nav bar. ([#38](https://github.com/Pikeras72/LegofyNet/issues/38))
+-   Add a 'FAQ' section in the nav bar. ([#39](https://github.com/Pikeras72/LegofyNet/issues/39))
+-   Add a 'Terms of Service & Privacy Policy' section in the nav bar. ([#40](https://github.com/Pikeras72/LegofyNet/issues/40))
+-   Allow only pdf or jpg elements to be dragged or selected to generate model images. ([#41](https://github.com/Pikeras72/LegofyNet/issues/41))
+-   Check which image the model takes as input. ([#42](https://github.com/Pikeras72/LegofyNet/issues/42))
   
 [Go up⬆️](#top)
 
@@ -178,6 +205,8 @@ Future Improvements:
 `Github Pages` for hosting the web page.
 
 `ChatGPT-3.5` for the initial structure (HTML, CSS and JS) of the web page, the implementation of the model via `TensorFlow.js` in the web page and questions during the development of the project.
+
+`Rive` for the animation of the model explanation.
 
 [Go up⬆️](#top)
 
@@ -205,4 +234,7 @@ Brownlee, J. (2021, April 29). [How to Implement Pix2Pix GAN Models From Scratch
 - [Pikeras72](https://github.com/Pikeras72)
   
 ## Special Thanks
+
+- [emil-pintilie](https://github.com/emil-pintilie)
+- [ManuelDobladoBueno](https://github.com/ManuelDobladoBueno)
 
