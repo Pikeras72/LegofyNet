@@ -43,13 +43,42 @@ async function main() {
         let files = dt.files;
     
         if (files.length > 0) {
-            document.getElementById('output-canvas-container').style.display = 'none';
             let file = files[0];
+
+            // Verify that the file is of type .jpg or .png
+            if (file.type === 'image/jpeg' || file.type === 'image/png') {
+                document.getElementById('output-canvas-container').style.display = 'none';
+                document.getElementById('generate-button').style.display = 'block';
+                document.getElementById('drop-text').style.display = 'none';
+                document.getElementById('file-info').style.display = 'block';
+                document.getElementById('file-name').textContent = file.name;
+
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('file-preview').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+
+                document.getElementById('generate-button').addEventListener('click', async function() {
+                    await handleFile(file);
+                });
+            } else {
+                alert('Please select a .jpg or .png file.');
+            }
+        }
+    }
+
+    document.getElementById('file-input').addEventListener('change', async function(event) {
+        var file = event.target.files[0];
+
+        // Verify that the file is of type .jpg or .png
+        if (file.type === 'image/jpeg' || file.type === 'image/png') {
+            document.getElementById('output-canvas-container').style.display = 'none';
             document.getElementById('generate-button').style.display = 'block';
             document.getElementById('drop-text').style.display = 'none';
             document.getElementById('file-info').style.display = 'block';
             document.getElementById('file-name').textContent = file.name;
-    
+
             var reader = new FileReader();
             reader.onload = function(e) {
                 document.getElementById('file-preview').src = e.target.result;
@@ -59,26 +88,9 @@ async function main() {
             document.getElementById('generate-button').addEventListener('click', async function() {
                 await handleFile(file);
             });
+        } else {
+            alert('Please select a .jpg or .png file.');
         }
-    }
-
-    document.getElementById('file-input').addEventListener('change', async function(event) {
-        document.getElementById('output-canvas-container').style.display = 'none';
-        var file = event.target.files[0];
-        document.getElementById('generate-button').style.display = 'block';
-        document.getElementById('drop-text').style.display = 'none';
-        document.getElementById('file-info').style.display = 'block';
-        document.getElementById('file-name').textContent = file.name;
-
-        var reader = new FileReader();
-        reader.onload = function(e) {
-            document.getElementById('file-preview').src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-
-        document.getElementById('generate-button').addEventListener('click', async function() {
-            await handleFile(file);
-        });
     });
 
     async function handleFile(file) {
@@ -129,7 +141,7 @@ async function main() {
     downloadButton.addEventListener('click', function() {
         const canvas = document.getElementById('output-canvas');
         const link = document.createElement('a');
-        link.download = selectedClass+' AI Image.png';
+        link.download = selectedClass + ' AI Image.png';
         link.href = canvas.toDataURL('image/png');
         link.click();
     });
