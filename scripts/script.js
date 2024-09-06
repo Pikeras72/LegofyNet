@@ -46,7 +46,7 @@ async function main() {
             let file = files[0];
 
             // Verify that the file is of type .jpg or .png
-            if (file.type === 'image/jpeg' || file.type === 'image/png') {
+            if (file !== null && (file.type === 'image/jpeg' || file.type === 'image/png')) {
                 document.getElementById('output-canvas-container').style.display = 'none';
                 document.getElementById('generate-button').style.display = 'block';
                 document.getElementById('drop-text').style.display = 'none';
@@ -59,9 +59,9 @@ async function main() {
                 };
                 reader.readAsDataURL(file);
 
-                document.getElementById('generate-button').addEventListener('click', async function() {
+                document.getElementById('generate-button').onclick = async function() {
                     await handleFile(file);
-                });
+                };
             } else {
                 alert('Please select a .jpg or .png file.');
             }
@@ -72,7 +72,7 @@ async function main() {
         var file = event.target.files[0];
 
         // Verify that the file is of type .jpg or .png
-        if (file.type === 'image/jpeg' || file.type === 'image/png') {
+        if (file !== null && (file.type === 'image/jpeg' || file.type === 'image/png')) {
             document.getElementById('output-canvas-container').style.display = 'none';
             document.getElementById('generate-button').style.display = 'block';
             document.getElementById('drop-text').style.display = 'none';
@@ -85,9 +85,9 @@ async function main() {
             };
             reader.readAsDataURL(file);
 
-            document.getElementById('generate-button').addEventListener('click', async function() {
+            document.getElementById('generate-button').onclick = async function() {
                 await handleFile(file);
-            });
+            };
         } else {
             alert('Please select a .jpg or .png file.');
         }
@@ -129,9 +129,14 @@ async function main() {
     
                 // Show the image in the output canvas
                 let outputCanvas = document.getElementById('output-canvas');
+                let cntx = outputCanvas.getContext('2d');
+                cntx.clearRect(0, 0, outputCanvas.width, outputCanvas.height);
                 outputCanvas.style.display = 'block';
                 document.getElementById('output-canvas-container').style.display = 'block';
                 await tf.browser.toPixels(output.squeeze(), outputCanvas);
+                
+                // Dispose tensors after use
+                tf.dispose([imgTensor, labelTensor, output]);
             };
         };
         reader.readAsDataURL(file);
