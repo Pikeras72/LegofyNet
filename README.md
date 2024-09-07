@@ -1,5 +1,5 @@
 [![GitHub Pages Status](https://img.shields.io/website?label=Website%20Status&url=https%3A%2F%2Fpikeras72.github.io%2FLegofyNet%2F)](https://pikeras72.github.io/LegofyNet/)
-![Static Badge](https://img.shields.io/badge/Version-0.6-blue)
+![Static Badge](https://img.shields.io/badge/Version-0.7-blue)
 [![License](https://img.shields.io/github/license/Pikeras72/LegofyNet?label=License)](https://github.com/Pikeras72/LegofyNet/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/Pikeras72/LegofyNet?label=Issues)](https://github.com/Pikeras72/LegofyNet/issues)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Pikeras72/LegofyNet?label=Repo%20Size)](https://github.com/Pikeras72/LegofyNet)
@@ -190,6 +190,24 @@ Future Improvements:
 -   Add a 'Terms of Service & Privacy Policy' section in the nav bar. ([#40](https://github.com/Pikeras72/LegofyNet/issues/40))
 -   Allow only pdf or jpg elements to be dragged or selected to generate model images. ([#41](https://github.com/Pikeras72/LegofyNet/issues/41))
 -   Check which image the model takes as input. ([#42](https://github.com/Pikeras72/LegofyNet/issues/42))
+
+#### <Update [07/09/2024]>
+
+**Version 0.7** is now available! New changes added:
+
+-   The website logo has changed, new look 😎!
+-   New images and animations added to the main page on each button.
+-   Now only .png and .jpg files are allowed as input to the model.
+-   The issue where the canvas was storing the other previously generated images has been fixed and now only saves the last generated image.
+-   A bug was detected that generates an error when not selecting an input file, but it was corrected in this issue: ([#47](https://github.com/Pikeras72/LegofyNet/issues/47))
+  
+ Weak points:
+
+-   The fonts and decorations of the website are very default, they could be improved considerably.
+  
+Future Improvements:
+
+-   Improve fonts and decoration of texts. ([#49](https://github.com/Pikeras72/LegofyNet/issues/49))
   
 [Go up⬆️](#top)
 
@@ -205,6 +223,8 @@ Future Improvements:
 `Github Pages` for hosting the web page.
 
 `ChatGPT-3.5` for the initial structure (HTML, CSS and JS) of the web page, the implementation of the model via `TensorFlow.js` in the web page and questions during the development of the project.
+
+`Image Creator` on Bing for 'Star Wars' related AI images used on the website.
 
 `Rive` for the animation of the model explanation.
 
