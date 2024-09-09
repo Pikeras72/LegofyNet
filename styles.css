@@ -1,258 +1,258 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
-    margin: 0;
-    background: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    transition: 0.3s;
-}
-header {
-    position: absolute;
-    top: 0;   
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    background-color: #222;
-    transition: 0.3s;
-    z-index: 1000;
-} 
-.logo {
-    margin: 10px;
-    margin-left: 30px;
-    width: 80px;
-    height: 80px;
-}
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 50px;
-}
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-.container {
-    position: absolute;
-    max-width: 1000px;
-    margin: 0 auto;
-    top: 145px;
-    text-align: center;
-}
-h1 {
-    color: #fff;
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    transition: 0.3s;
-}
-h2 {
-  color: #fff;
-  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
   transition: 0.3s;
 }
+header {
+  position: absolute;
+  top: 0;   
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: #222;
+  transition: 0.3s;
+  z-index: 1000;
+} 
+.logo {
+  margin: 10px;
+  margin-left: 30px;
+  width: 80px;
+  height: 80px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.container {
+  position: absolute;
+  max-width: 1000px;
+  margin: 0 auto;
+  top: 145px; 
+  text-align: center;
+}
+h1 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+h2 {
+color: #fff;
+font-size: 18px;
+transition: 0.3s;
+}
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12.5px;
-    margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12.5px;
+  margin-top: 25px;
 }
 .grid-item {
-    width: 150px;
-    height: 150px;
-    background-color: #555;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 500;    
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;   
-    transition: transform 0.3s ease;
-    overflow: hidden;
-    position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: #555;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;    
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;   
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  position: relative;
 }
 .grid-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(128, 128, 128, 0.5);
-    transition: opacity 0.3s;
-    z-index: 1;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(128, 128, 128, 0.5);
+  transition: opacity 0.3s;
+  z-index: 1;
 }
 .grid-item:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 .grid-item:hover::before {
-  opacity: 0;
+opacity: 0;
 }
 
 #code-version {
-    color: #fff;
-    position: fixed;
-    bottom: 20px;
-    right: 40px;
+  color: #fff;
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
 }
 
 .version-color {
-  font-size: 18px;
-  font-weight: bold;
+font-size: 18px;
+font-weight: bold;
 }
 
 #output-canvas {
-  width: 96px;
-  height: 192px;
-  padding: 15px;
+width: 96px;
+height: 192px;
+padding: 15px;
 }
 #output-text{
-  margin-bottom: 15px;
+margin-bottom: 15px;
 }
 
 #drop-area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px dashed #ccc;
-  border-radius: 20px;
-  text-align: center;
-  font-size: 20px;
-  color: #999;
-  background-color: #444;
+display: flex;
+flex-direction: column;
+align-items: center;
+border: 2px dashed #ccc;
+border-radius: 20px;
+text-align: center;
+font-size: 20px;
+color: #999;
+background-color: #444;
 }
 #file-input {
-  display: none;
+display: none;
 }
 #file-label {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #777;
-  color: #fff;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-bottom: 25px;
-  margin-top: 15px;
-  transition: background-color 0.3s;
+display: inline-block;
+padding: 10px 20px;
+background-color: #777;
+color: #fff;
+border-radius: 10px;
+cursor: pointer;
+margin-bottom: 25px;
+margin-top: 15px;
+transition: background-color 0.3s;
 }
 #file-label:hover {
-  background-color: #888;
+background-color: #888;
 }
 #file-info {
-  margin: 20px;
-  margin-top: 50px;
-  font-size: 15px;
+margin: 20px;
+margin-top: 50px;
+font-size: 15px;
 }
 #output-canvas-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  padding-bottom: 20px;
-  padding-top: 5px; 
-  padding-left: 15px; 
-  padding-right: 15px;
-  box-shadow: 0 0 7.5px rgba(255, 255, 255, 0.5);
-  max-width: 175px; 
-  margin: auto;
-  margin-bottom: 100px;
-  margin-top: 30px;
-  background-color: #444;
-  position: relative;
+display: flex;
+align-items: center;
+flex-direction: column;
+border: 2px solid #fff;
+border-radius: 10px;
+padding-bottom: 20px;
+padding-top: 5px; 
+padding-left: 15px; 
+padding-right: 15px;
+box-shadow: 0 0 7.5px rgba(255, 255, 255, 0.5);
+max-width: 175px; 
+margin: auto;
+margin-bottom: 100px;
+margin-top: 30px;
+background-color: #444;
+position: relative;
 }
 #output-canvas-wrapper {
-  position: relative;
-  width: 126px;
-  height: 222px;
-  margin-left: 25px;
-  background-color: #fff;
-  border-radius: 10px;
+position: relative;
+width: 126px;
+height: 222px;
+margin-left: 25px;
+background-color: #fff;
+border-radius: 10px;
 }
 #download-button{
-  cursor: pointer;
-  border: 2px solid #333;
-  border-radius: 5px;
-  margin-top: 20px;
-  background-color: #444;
-  box-shadow: 0 0 7.5px #999;
-  padding: 5px 8px;
-  transition: 0.15s;
+cursor: pointer;
+border: 2px solid #333;
+border-radius: 5px;
+margin-top: 20px;
+background-color: #444;
+box-shadow: 0 0 7.5px #999;
+padding: 5px 8px;
+transition: 0.15s;
 }
 #download-button:hover{
-  background-color: #333;
-  border: 2px solid #222;
-  box-shadow: 0 0 7.5px #fff;
+background-color: #333;
+border: 2px solid #222;
+box-shadow: 0 0 7.5px #fff;
 }
 #generate-button-container{
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+margin-top: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
 }
 /*Copyright - 2024 catraco (Catraco) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*/
 #generate-button {
-  --primary: 150, 150, 150;
-  --secondary: 61, 61, 61;
-  width: 60px;
-  height: 50px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  user-select: none;
-  touch-action: manipulation;
-  outline: 10px solid rgb(var(--primary), .5);
-  border-radius: 100%;
-  position: relative;
-  transition: .3s;
+--primary: 150, 150, 150;
+--secondary: 61, 61, 61;
+width: 60px;
+height: 50px;
+border: none;
+outline: none;
+cursor: pointer;
+user-select: none;
+touch-action: manipulation;
+outline: 10px solid rgb(var(--primary), .5);
+border-radius: 100%;
+position: relative;
+transition: .3s;
 }
 
 #generate-button #back {
-  background: rgb(var(--secondary));
-  border-radius: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+background: rgb(var(--secondary));
+border-radius: 100%;
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
 }
 #generate-button #front {
-  background: linear-gradient(0deg, rgba(var(--primary), .6) 20%, rgba(var(--primary)) 50%);
-  box-shadow: 0 .5em 1em -0.2em rgba(var(--secondary), .5);
-  border-radius: 100%;
-  position: absolute;
-  border: 1px solid rgb(var(--secondary));
-  left: -1px;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  font-weight: 600;
-  font-family: inherit;
-  transform: translateY(-15%);
-  transition: .15s;
-  color: rgb(var(--secondary));
+background: linear-gradient(0deg, rgba(var(--primary), .6) 20%, rgba(var(--primary)) 50%);
+box-shadow: 0 .5em 1em -0.2em rgba(var(--secondary), .5);
+border-radius: 100%;
+position: absolute;
+border: 1px solid rgb(var(--secondary));
+left: -1px;
+top: 0;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 1.2rem;
+font-weight: 600;
+font-family: inherit;
+transform: translateY(-15%);
+transition: .15s;
+color: rgb(var(--secondary));
 }
 #generate-button:active #front {
-  transform: translateY(0%);
-  box-shadow: 0 0;
+transform: translateY(0%);
+box-shadow: 0 0;
 }
 
 #about-title {
@@ -320,4 +320,39 @@ h2 {
   background-color: white;
   padding: 3px;
   border-radius: 10px;
+}
+
+.gallery-container {
+width: 100%;
+overflow: hidden;
+}
+
+.gallery {
+display: flex;
+width: calc(100% * 6); /*Adjust according to the number of images*/
+animation: slide 30s infinite linear;
+}
+
+.gallery img {
+width: 16.666%;
+height: auto;
+transition: transform 0.3s ease-in-out;
+}
+
+.gallery-container:hover .gallery {
+animation-play-state: paused;
+}
+
+.gallery img:hover {
+transform: scale(1.025);
+box-shadow: 0 0 25px rgba(0, 0, 0);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
