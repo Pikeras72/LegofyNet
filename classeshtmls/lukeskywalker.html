@@ -24,7 +24,7 @@
         </nav>
     </header>
     <div class="container">
-        <h2>Selected Class: <i>Luke Skywalker</i></h2>
+        <h3>Selected Class: <i>Luke Skywalker</i></h3>
         <h1>Upload Image for the AI model</h1>
         <div id="drop-area">
             <p id="drop-text" style="margin-top: 45px; display: none;">Drop a file here</p>
@@ -34,7 +34,9 @@
             </div>
             <label for="file-input" id="file-label" style="display: none;">Browse File</label>
             <input type="file" id="file-input" accept="image/*">
-            <p id="model-loading-message" style="padding: 50px;">The AI model is loading...</p>
+            <p id="model-loading-message">The AI model is loading...</p>
+            <p id="image-loading-message" style="display: none;">Generating your image...</p>
+            <div id="loading-spinner"></div>
         </div>
         <div id="generate-button-container">
             <button id="generate-button" style="display: none;">
