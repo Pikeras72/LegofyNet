@@ -1,6 +1,8 @@
 async function main() {
+    document.getElementById('loading-spinner').style.display = 'block';
     const model = await tf.loadLayersModel('../model/model.json');
     console.log("Model Loaded");
+    document.getElementById('loading-spinner').style.display = 'none';
     document.getElementById('model-loading-message').style.display = 'none';
     document.getElementById('file-label').style.display = 'block';
     document.getElementById('drop-text').style.display = 'block';
@@ -61,6 +63,11 @@ async function main() {
                     reader.readAsDataURL(file);
     
                     document.getElementById('generate-button').onclick = async function() {
+                        document.getElementById('loading-spinner').style.display = 'block';
+                        document.getElementById('image-loading-message').style.display = 'block';
+                        document.getElementById('file-label').style.display = 'none';
+                        document.getElementById('generate-button').style.display = 'none';
+                        document.getElementById('file-info').style.display = 'none';
                         await handleFile(file);
                     };
                 }else {
@@ -89,6 +96,11 @@ async function main() {
                 reader.readAsDataURL(file);
 
                 document.getElementById('generate-button').onclick = async function() {
+                    document.getElementById('loading-spinner').style.display = 'block';
+                    document.getElementById('image-loading-message').style.display = 'block';
+                    document.getElementById('file-label').style.display = 'none';
+                    document.getElementById('generate-button').style.display = 'none';
+                    document.getElementById('file-info').style.display = 'none';
                     await handleFile(file);
                 };
             }else {
@@ -138,7 +150,11 @@ async function main() {
                 outputCanvas.style.display = 'block';
                 document.getElementById('output-canvas-container').style.display = 'block';
                 await tf.browser.toPixels(output.squeeze(), outputCanvas);
-                
+                document.getElementById('loading-spinner').style.display = 'none';
+                document.getElementById('image-loading-message').style.display = 'none';
+                document.getElementById('file-label').style.display = 'block';
+                document.getElementById('generate-button').style.display = 'block';
+                document.getElementById('file-info').style.display = 'block';
                 // Dispose tensors after use
                 tf.dispose([imgTensor, labelTensor, output]);
             };

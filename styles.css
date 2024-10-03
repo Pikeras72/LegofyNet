@@ -64,7 +64,6 @@ h1 {
   font-size: 42px;
   font-weight: 900;
   margin-bottom: 30px;
-  letter-spacing: 1.25px;
   transition: 0.3s;
 }
 h2 {
@@ -169,8 +168,8 @@ h2 {
   color: #eeeeee;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 25px;
-  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-top: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
@@ -279,6 +278,25 @@ h2 {
 #generate-button:active #front{
   transform: translateY(0%);
   box-shadow: 0 0;
+}
+
+#model-loading-message, #image-loading-message {
+  margin-top: 40px;
+}
+#loading-spinner {
+  display: none;
+  border: 10px solid #888;
+  border-top: 10px solid #fcbf49;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+  margin: 5 auto; 
+  margin-bottom: 30px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 #about-title {
