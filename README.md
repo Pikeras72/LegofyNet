@@ -1,16 +1,16 @@
-[![GitHub Pages Status](https://img.shields.io/website?label=Website%20Status&url=https%3A%2F%2Fpikeras72.github.io%2FLegofyNet%2F)](https://pikeras72.github.io/LegofyNet/)
+[![GitHub Pages Status](https://img.shields.io/website?label=Website%20Status&url=https%3A%2F%2Fpikeras72.github.io%2FBlockifyNet%2F)](https://pikeras72.github.io/BlockifyNet/)
 ![Static Badge](https://img.shields.io/badge/Version-0.7-blue)
-[![License](https://img.shields.io/github/license/Pikeras72/LegofyNet?label=License)](https://github.com/Pikeras72/LegofyNet/blob/main/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/Pikeras72/LegofyNet?label=Issues)](https://github.com/Pikeras72/LegofyNet/issues)
-[![GitHub repo size](https://img.shields.io/github/repo-size/Pikeras72/LegofyNet?label=Repo%20Size)](https://github.com/Pikeras72/LegofyNet)
+[![License](https://img.shields.io/github/license/Pikeras72/BlockifyNet?label=License)](https://github.com/Pikeras72/BlockifyNet/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/Pikeras72/BlockifyNet?label=Issues)](https://github.com/Pikeras72/BlockifyNet/issues)
+[![GitHub repo size](https://img.shields.io/github/repo-size/Pikeras72/BlockifyNet?label=Repo%20Size)](https://github.com/Pikeras72/BlockifyNet)
 
 
 
 <a name="top"></a>
-# LegofyNet - Generate Lego images with AI (Multiclass Pix2Pix)
-**Pix2Pix multiclass** structure for generating Lego figures from real images. 
+# BlockifyNet - Generate images similar to Lego® Star Wars with AI (Multiclass Pix2Pix)
+**Pix2Pix multiclass** structure for generating Lego® figures from real images. 
 
-**Access the website here:** https://pikeras72.github.io/LegofyNet/
+**Access the website here:** https://pikeras72.github.io/BlockifyNet/
 
 ## Table of contents
 * [Description](#description)
@@ -21,7 +21,7 @@
  
 <a name="description"></a>
 ### 1. Description
-This project stems from inspiration found in the `Generative Methods` subject at the Polytechnic University of Madrid in 2023, where we initially developed the first version using a standard **Pix2Pix implementation**. This repository represents the continuation of the project, implementing a new **`Pix2Pix multiclass structure`** allowing users to select their desired class for generation. I have been experimenting with this new Pix2Pix approach for some time, and it yields **more accuarate and realistic** images compared to a standard Pix2Pix implementation for generating Lego figures from real-world images (focused on the `Star Wars Universe`). This is the first project I have encountered with this type of structure.
+This project stems from inspiration found in the `Generative Methods` subject at the Polytechnic University of Madrid in 2023, where we initially developed the first version using a standard **Pix2Pix implementation**. This repository represents the continuation of the project, implementing a new **`Pix2Pix multiclass structure`** allowing users to select their desired class for generation. I have been experimenting with this new Pix2Pix approach for some time, and it yields **more accuarate and realistic** images compared to a standard Pix2Pix implementation for generating images similar to Lego® figures from real-world pictures (focused on the `Star Wars Universe`). This is the first project I have encountered with this type of structure.
 
 The dataset was created through web scraping and subsequently modified and cleaned. All training images were *128x64*px and in `.png` format.
 
@@ -38,13 +38,13 @@ For example, given this image and selecting the class `Calamari`:
 
 |**Selected Image:**|**Generated Image:**|
 |-------------------|--------------------|
-|<img src="https://github.com/Pikeras72/LegofyNet/assets/90858639/588ecaea-0792-4393-9413-23804ff5a772" width="300" height="400">| <img src="https://github.com/Pikeras72/LegofyNet/assets/90858639/ff27e42f-2cf3-4ee5-bd56-0daed0188b46" width="200" height="400">|
+|<img src="https://github.com/Pikeras72/BlockifyNet/assets/90858639/588ecaea-0792-4393-9413-23804ff5a772" width="300" height="400">| <img src="https://github.com/Pikeras72/BlockifyNet/assets/90858639/ff27e42f-2cf3-4ee5-bd56-0daed0188b46" width="200" height="400">|
 
 Another example, given this image and selecting the class `Yoda`:
 
 |**Selected Image:**|**Generated Image:**|
 |-------------------|--------------------|
-|<img src="https://github.com/Pikeras72/LegofyNet/assets/90858639/aa7c357a-36d7-4609-ab52-e6e8852582c0" width="200" height="425">| <img src="https://github.com/Pikeras72/LegofyNet/assets/90858639/b7a285a1-94da-4125-8d4a-1e931d2e1d67" width="200" height="400">|
+|<img src="https://github.com/Pikeras72/BlockifyNet/assets/90858639/aa7c357a-36d7-4609-ab52-e6e8852582c0" width="200" height="425">| <img src="https://github.com/Pikeras72/BlockifyNet/assets/90858639/b7a285a1-94da-4125-8d4a-1e931d2e1d67" width="200" height="400">|
  
 [Go up⬆️](#top)
 
@@ -69,16 +69,16 @@ Weak points:
   
 Future Improvements:
 
--  Improve interface (nav bar, favicon.ico, multiple HTMLs for each class, credits, help section, etc.). ([#11](https://github.com/Pikeras72/LegofyNet/issues/11))
--  Upload a new and better model that generates images with higher quality. ([#9](https://github.com/Pikeras72/LegofyNet/issues/9))
--  Increase the size of the image shown on the web page. ([#4](https://github.com/Pikeras72/LegofyNet/issues/4))
+-  Improve interface (nav bar, favicon.ico, multiple HTMLs for each class, credits, help section, etc.). ([#11](https://github.com/Pikeras72/BlockifyNet/issues/11))
+-  Upload a new and better model that generates images with higher quality. ([#9](https://github.com/Pikeras72/BlockifyNet/issues/9))
+-  Increase the size of the image shown on the web page. ([#4](https://github.com/Pikeras72/BlockifyNet/issues/4))
 
 #### <Update [26/03/2024]>
 
 **Version 0.2** now available! New changes added:
 
 -  New HTMLs pages for each class.
--  LegofyNet logo and favicon.ico added to the web page.
+-  BlockifyNet logo and favicon.ico added to the web page.
 -  Nav bar included.
 -  If you want to generate an image you just have to click on the corresponding class name and you will be redirected to a page where you can generate images of the selected class.
 
@@ -90,9 +90,9 @@ Future Improvements:
   
 Future Improvements:
 
--   Correct the 'model.predict' error. ([#1](https://github.com/Pikeras72/LegofyNet/issues/1))
--   Add the version of the project in the webpage. ([#13](https://github.com/Pikeras72/LegofyNet/issues/13))
--   Make the web responsive. ([#12](https://github.com/Pikeras72/LegofyNet/issues/12))
+-   Correct the 'model.predict' error. ([#1](https://github.com/Pikeras72/BlockifyNet/issues/1))
+-   Add the version of the project in the webpage. ([#13](https://github.com/Pikeras72/BlockifyNet/issues/13))
+-   Make the web responsive. ([#12](https://github.com/Pikeras72/BlockifyNet/issues/12))
 
 #### <Update [25/04/2024]>
 
@@ -111,12 +111,12 @@ Future Improvements:
 Future Improvements:
 
 -   Since I'm a student, I'm still learning new things and I recently learned the importance of creating new branches for each feature and not always deploying to the main branch. (How had I not realized this before...) (×﹏×) 
--   Complete the fix for the 'model.predict' error. ([#1](https://github.com/Pikeras72/LegofyNet/issues/1))
--   Initialize the Dark/Light mode button to Dark. ([#7](https://github.com/Pikeras72/LegofyNet/issues/7))
--   Pass the version number to a global variable. ([#8](https://github.com/Pikeras72/LegofyNet/issues/8))
--   Generate the images with and appropriate decoration and surroundings. ([#5](https://github.com/Pikeras72/LegofyNet/issues/5))
--   Add details to the squares of each class at the initial page to better identify the class. ([#6](https://github.com/Pikeras72/LegofyNet/issues/6))
--   Complete the Nav Bar sections (About, Credits, The Model, etc.). ([#10](https://github.com/Pikeras72/LegofyNet/issues/10))
+-   Complete the fix for the 'model.predict' error. ([#1](https://github.com/Pikeras72/BlockifyNet/issues/1))
+-   Initialize the Dark/Light mode button to Dark. ([#7](https://github.com/Pikeras72/BlockifyNet/issues/7))
+-   Pass the version number to a global variable. ([#8](https://github.com/Pikeras72/BlockifyNet/issues/8))
+-   Generate the images with and appropriate decoration and surroundings. ([#5](https://github.com/Pikeras72/BlockifyNet/issues/5))
+-   Add details to the squares of each class at the initial page to better identify the class. ([#6](https://github.com/Pikeras72/BlockifyNet/issues/6))
+-   Complete the Nav Bar sections (About, Credits, The Model, etc.). ([#10](https://github.com/Pikeras72/BlockifyNet/issues/10))
 
 #### <Update [29/04/2024]>
 
@@ -130,7 +130,7 @@ Future Improvements:
 
  Weak points:
 
--   When Draging a file to the Drag&Drop section, it automatically start generating the Lego image, instead, it might be good to show the name of the selected file and a small image of it so the user knows what file they have selected.
+-   When Draging a file to the Drag&Drop section, it automatically start generating the image, instead, it might be good to show the name of the selected file and a small image of it so the user knows what file they have selected.
 -   After having uploaded a file, a 'Generate Image' button should appear in order to generate a new image.
 -   Sometimes the user faces the situation where the model is not completely loaded yet. Until it's loaded, they can not select a file, buit they do not know that it is due to the model still loading. There should be a loading bar or a notification for them to know what is happening.
 -   The code have some variables or comments is Spanish that should be changed to English.
@@ -139,12 +139,12 @@ Future Improvements:
   
 Future Improvements:
 
--   Show the name of the file and it's image once uploaded. ([#18](https://github.com/Pikeras72/LegofyNet/issues/18))
--   Show a 'Generate button' after having uploaded an image. ([#19](https://github.com/Pikeras72/LegofyNet/issues/19))
--   Notify the user that the model is still loading until it's completely loaded. ([#20](https://github.com/Pikeras72/LegofyNet/issues/20))
--   Translate the whole project to English. ([#21](https://github.com/Pikeras72/LegofyNet/issues/21))
--   Improve the black/light mode. ([#22](https://github.com/Pikeras72/LegofyNet/issues/22))
--   Indicate with a text the class that corresponds to each page. ([#23](https://github.com/Pikeras72/LegofyNet/issues/23))
+-   Show the name of the file and it's image once uploaded. ([#18](https://github.com/Pikeras72/BlockifyNet/issues/18))
+-   Show a 'Generate button' after having uploaded an image. ([#19](https://github.com/Pikeras72/BlockifyNet/issues/19))
+-   Notify the user that the model is still loading until it's completely loaded. ([#20](https://github.com/Pikeras72/BlockifyNet/issues/20))
+-   Translate the whole project to English. ([#21](https://github.com/Pikeras72/BlockifyNet/issues/21))
+-   Improve the black/light mode. ([#22](https://github.com/Pikeras72/BlockifyNet/issues/22))
+-   Indicate with a text the class that corresponds to each page. ([#23](https://github.com/Pikeras72/BlockifyNet/issues/23))
 
 #### <Update [02/05/2024]>
 
@@ -162,7 +162,7 @@ Future Improvements:
   
 Future Improvements:
 
--   Add a 'Download' button in case the user wants to save the generated image. ([#31](https://github.com/Pikeras72/LegofyNet/issues/31))
+-   Add a 'Download' button in case the user wants to save the generated image. ([#31](https://github.com/Pikeras72/BlockifyNet/issues/31))
 
 #### <Update [29/08/2024]>
 
@@ -171,7 +171,7 @@ Future Improvements:
 -   Now the entire project (including the code) is in English, yay!
 -   A button to download the generated image was added correctly.
 -   The navigation bar options are complete with useful and interesting information. Check it out!
--   Issue [#22](https://github.com/Pikeras72/LegofyNet/issues/22) has been abandoned because I cannot resolve the related issue. Instead, this issue has been replaced for now by [#35](https://github.com/Pikeras72/LegofyNet/issues/35).
+-   Issue [#22](https://github.com/Pikeras72/BlockifyNet/issues/22) has been abandoned because I cannot resolve the related issue. Instead, this issue has been replaced for now by [#35](https://github.com/Pikeras72/BlockifyNet/issues/35).
   
  Weak points:
 
@@ -184,12 +184,12 @@ Future Improvements:
   
 Future Improvements:
 
--   Improve the Logo of the webpage. ([#37](https://github.com/Pikeras72/LegofyNet/issues/37))
--   Add a 'Gallery' section in the nav bar. ([#38](https://github.com/Pikeras72/LegofyNet/issues/38))
--   Add a 'FAQ' section in the nav bar. ([#39](https://github.com/Pikeras72/LegofyNet/issues/39))
--   Add a 'Terms of Service & Privacy Policy' section in the nav bar. ([#40](https://github.com/Pikeras72/LegofyNet/issues/40))
--   Allow only pdf or jpg elements to be dragged or selected to generate model images. ([#41](https://github.com/Pikeras72/LegofyNet/issues/41))
--   Check which image the model takes as input. ([#42](https://github.com/Pikeras72/LegofyNet/issues/42))
+-   Improve the Logo of the webpage. ([#37](https://github.com/Pikeras72/BlockifyNet/issues/37))
+-   Add a 'Gallery' section in the nav bar. ([#38](https://github.com/Pikeras72/BlockifyNet/issues/38))
+-   Add a 'FAQ' section in the nav bar. ([#39](https://github.com/Pikeras72/BlockifyNet/issues/39))
+-   Add a 'Terms of Service & Privacy Policy' section in the nav bar. ([#40](https://github.com/Pikeras72/BlockifyNet/issues/40))
+-   Allow only pdf or jpg elements to be dragged or selected to generate model images. ([#41](https://github.com/Pikeras72/BlockifyNet/issues/41))
+-   Check which image the model takes as input. ([#42](https://github.com/Pikeras72/BlockifyNet/issues/42))
 
 #### <Update [07/09/2024]>
 
@@ -199,7 +199,7 @@ Future Improvements:
 -   New images and animations added to the main page on each button.
 -   Now only .png and .jpg files are allowed as input to the model.
 -   The issue where the canvas was storing the other previously generated images has been fixed and now only saves the last generated image.
--   A bug was detected that generates an error when not selecting an input file, but it was corrected in this issue: ([#47](https://github.com/Pikeras72/LegofyNet/issues/47))
+-   A bug was detected that generates an error when not selecting an input file, but it was corrected in this issue: ([#47](https://github.com/Pikeras72/BlockifyNet/issues/47))
   
  Weak points:
 
@@ -207,7 +207,7 @@ Future Improvements:
   
 Future Improvements:
 
--   Improve fonts and decoration of texts. ([#49](https://github.com/Pikeras72/LegofyNet/issues/49))
+-   Improve fonts and decoration of texts. ([#49](https://github.com/Pikeras72/BlockifyNet/issues/49))
   
 [Go up⬆️](#top)
 
