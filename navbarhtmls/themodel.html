@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
-    <title>LegofyNet</title>
+    <title>BlockifyNet</title>
     <script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -26,10 +26,10 @@
     <link rel="stylesheet" type="text/css" href="../styles.css">
     <link rel="icon" href="../images/tab_favicon.ico" type="image/x-icon">
 </head>
-<body id="main-body">
+<body id="body">
     <header>
         <div>
-            <a href="../index.html"><img class="logo" src="../images/favicon.ico" alt="LegofyNet"></a>
+            <a href="../index.html"><img class="logo" src="../images/favicon.ico" alt="BlockifyNet"></a>
         </div>
         <nav>
             <ul>
@@ -38,21 +38,22 @@
                 <li><a href="credits.html">Credits</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="faq.html">FAQ</a></li>
+                <li><a href="terms.html">TOS & PP</a></li>
             </ul>
         </nav>
     </header>
     <div>
         
     </div>
-    <div id="about-title">
+    <div id="the-model-title">
         <h1 style="font-size: 40px;">How does it work?</h1>
     </div>
-    <div id="about-container">
+    <div id="the-model-container">
         <p>The <b>model</b> follows a structure of a <b style="color: #fcbf49">Multiclass Pix2Pix.</b></p>
         <p>You will give the model an image representing a certain category. Then, the model will work its magic to create a new image based on what you provided, tweaking it to better match the features of that category.</p>
         <p>The "magic" it is learned during the model's training, where it uses a <b style="color: #fcbf49">multiclass version of a PatchGan discriminator</b>. This model works by taking the input image and the expected output, combining them, and then splitting the resulting image into <b>patches</b>. The discriminator then examines each patch, labeling it as "True" if it believes the input is non-AI generated or "False" if it thinks it's AI generated. Additionally, it assigns each patch a class label.</p>
         <canvas id="rive-canvas"></canvas>
-        <p>The model has two main parts: the <b style="color: #fcbf49">Generator</b> and the <b style="color: #fcbf49">Discriminator</b>. The Generator takes an input image and its corresponding class tag, then tries to create an image that looks like something from Lego Star Wars.</p>
+        <p>The model has two main parts: the <b style="color: #fcbf49">Generator</b> and the <b style="color: #fcbf49">Discriminator</b>. The Generator takes an input image and its corresponding class label, then attempts to create an image that looks like a Lego® Star Wars minifigure.</p>
         <p>On the other hand, the Discriminator checks pairs of images. It compares either the generated image with the original one or the original image with an expected one. It decides if the concatenation of both images is true or false and assigns a class label for each patch.</p>
         <p>Together, these <b>two parts</b> make up the whole model. When you give it a class tag and an image, the Generator makes a new image. Then, both this new image and the original one go to the Discriminator. The Discriminator checks each patch of these combined images and says what class it thinks each patch belongs to and if they are AI generated or not.</p>
         <br>
