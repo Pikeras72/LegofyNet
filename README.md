@@ -1,5 +1,5 @@
 [![GitHub Pages Status](https://img.shields.io/website?label=Website%20Status&url=https%3A%2F%2Fpikeras72.github.io%2FBlockifyNet%2F)](https://pikeras72.github.io/BlockifyNet/)
-![Static Badge](https://img.shields.io/badge/Version-0.7-blue)
+![Static Badge](https://img.shields.io/badge/Version-1.0-blue)
 [![License](https://img.shields.io/github/license/Pikeras72/BlockifyNet?label=License)](https://github.com/Pikeras72/BlockifyNet/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/Pikeras72/BlockifyNet?label=Issues)](https://github.com/Pikeras72/BlockifyNet/issues)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Pikeras72/BlockifyNet?label=Repo%20Size)](https://github.com/Pikeras72/BlockifyNet)
@@ -21,7 +21,7 @@
  
 <a name="description"></a>
 ### 1. Description
-This project stems from inspiration found in the `Generative Methods` subject at the Polytechnic University of Madrid in 2023, where we initially developed the first version using a standard **Pix2Pix implementation**. This repository represents the continuation of the project, implementing a new **`Pix2Pix multiclass structure`** allowing users to select their desired class for generation. I have been experimenting with this new Pix2Pix approach for some time, and it yields **more accuarate and realistic** images compared to a standard Pix2Pix implementation for generating images similar to Lego® figures from real-world pictures (focused on the `Star Wars Universe`). This is the first project I have encountered with this type of structure.
+This project stems from inspiration found in the `Generative Methods` subject at the Polytechnic University of Madrid in 2023, where we initially developed the first version using a standard **Pix2Pix implementation**. This repository represents the continuation of the project, implementing a new **`PatchGAN multiclass structure`** allowing users to select their desired class for generation. I have been experimenting with this new approach for some time, and it yields **more accuarate and realistic** images compared to a standard PatchGAN implementation for generating images similar to Lego® figures from real-world pictures (focused on the `Star Wars Universe`). This is the first project I have encountered with this type of structure.
 
 The dataset was created through web scraping and subsequently modified and cleaned. All training images were *128x64*px and in `.png` format.
 
@@ -195,11 +195,11 @@ Future Improvements:
 
 **Version 0.7** is now available! New changes added:
 
--   The website logo has changed, new look 😎!
+-   The website logo has changed, new look!
 -   New images and animations added to the main page on each button.
 -   Now only .png and .jpg files are allowed as input to the model.
 -   The issue where the canvas was storing the other previously generated images has been fixed and now only saves the last generated image.
--   A bug was detected that generates an error when not selecting an input file, but it was corrected in this issue: ([#47](https://github.com/Pikeras72/BlockifyNet/issues/47))
+-   A bug was detected that generates an error when not selecting an input file, but it was corrected in this issue: ([#47](https://github.com/Pikeras72/BlockifyNet/issues/47)).
   
  Weak points:
 
@@ -208,7 +208,19 @@ Future Improvements:
 Future Improvements:
 
 -   Improve fonts and decoration of texts. ([#49](https://github.com/Pikeras72/BlockifyNet/issues/49))
-  
+
+#### <Update [07/10/2024]>
+
+**Version 1.0** is finally here! 🎉 New changes added:
+
+-   Gallery section added to the web page.
+-   FAQ section added to the web page.
+-   Terms of Service & Privacy Policy section added to the web page.
+-   The web page is now responsive. 
+-   The texts and decorations of the website have been considerably improved.
+-   A loading circle animation is added to help with user waiting.
+-   The name of the project needed to be changed, so it was corrected in this issue: ([#56](https://github.com/Pikeras72/BlockifyNet/issues/56)).
+
 [Go up⬆️](#top)
 
 ---
@@ -224,7 +236,7 @@ Future Improvements:
 
 `ChatGPT-3.5` for the initial structure (HTML, CSS and JS) of the web page, the implementation of the model via `TensorFlow.js` in the web page and questions during the development of the project.
 
-`Image Creator` on Bing for 'Star Wars' related AI images used on the website.
+`Image Creator` on Bing for 'Star Wars' related AI images used on the website and the logo creation.
 
 `Rive` for the animation of the model explanation.
 

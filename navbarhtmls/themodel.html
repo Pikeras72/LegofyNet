@@ -49,7 +49,7 @@
         <h1 style="font-size: 40px;">How does it work?</h1>
     </div>
     <div id="the-model-container">
-        <p>The <b>model</b> follows a structure of a <b style="color: #fcbf49">Multiclass Pix2Pix.</b></p>
+        <p>The <b>model</b> follows a structure of a <b style="color: #fcbf49">Multiclass PatchGAN.</b></p>
         <p>You will give the model an image representing a certain category. Then, the model will work its magic to create a new image based on what you provided, tweaking it to better match the features of that category.</p>
         <p>The "magic" it is learned during the model's training, where it uses a <b style="color: #fcbf49">multiclass version of a PatchGan discriminator</b>. This model works by taking the input image and the expected output, combining them, and then splitting the resulting image into <b>patches</b>. The discriminator then examines each patch, labeling it as "True" if it believes the input is non-AI generated or "False" if it thinks it's AI generated. Additionally, it assigns each patch a class label.</p>
         <canvas id="rive-canvas"></canvas>
@@ -59,17 +59,17 @@
         <br>
         <p>The internal structure of the <b style="color: #fcbf49">Generator</b> it is as follows:</p>
         <div id="disc-structure-container">
-            <img src="../images/gen_model.png" style="width: 900px;">
+            <img src="../images/gen_model.png">
         </div>
         <br>
         <p>The internal structure of the <b style="color: #fcbf49">Discriminator</b> it is as follows:</p>
         <div id="disc-structure-container">
-            <img src="../images/disc_model.png"  style="width: 900px;">
+            <img src="../images/disc_model.png">
         </div>
         <br>
         <p>The internal structure of the <b style="color: #fcbf49">Final Model</b> it is as follows:</p>
         <div id="disc-structure-container">
-            <img src="../images/final_model.png" style="width: 900px;">
+            <img src="../images/final_model.png">
         </div>
     </div>
     <div id="code-version"></div>

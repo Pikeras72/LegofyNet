@@ -336,7 +336,7 @@ h2 {
 }
 #image-description{
   color: white;
-  width: 200px; 
+  width: 160px; 
   text-align: center; 
   font-style: italic; 
   font-size: 15px;
@@ -353,14 +353,28 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-#rive-canvas{
-  width: 800px;
-  height: 800px;
+#rive-canvas {
+  width: 100%;
+  height: auto;
 }
 #disc-structure-container{
   background-color: white;
   padding: 3px;
   border-radius: 10px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+#disc-structure-container img{
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 600px) {
+  #disc-structure-container{
+    padding: 2px;
+  }
+  #disc-structure-container img{
+    width: 100%;
+  }
 }
 
 .gallery-container{
