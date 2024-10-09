@@ -26,11 +26,10 @@ header {
   z-index: 1000;
 } 
 .logo {
-  margin: 5px;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
   width: 120px;
-  height: 100px;
+  height: 120px;
 }
 nav ul {
   list-style: none;
