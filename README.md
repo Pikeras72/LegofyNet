@@ -1,5 +1,5 @@
 [![GitHub Pages Status](https://img.shields.io/website?label=Website%20Status&url=https%3A%2F%2Fpikeras72.github.io%2FLegofyNet%2F)](https://pikeras72.github.io/LegofyNet/)
-![Static Badge](https://img.shields.io/badge/Version-1.0-blue)
+![Static Badge](https://img.shields.io/badge/Version-2.0-blue)
 [![License](https://img.shields.io/github/license/Pikeras72/LegofyNet?label=License)](https://github.com/Pikeras72/LegofyNet/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/Pikeras72/LegofyNet?label=Issues)](https://github.com/Pikeras72/LegofyNet/issues)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Pikeras72/LegofyNet?label=Repo%20Size)](https://github.com/Pikeras72/LegofyNet)
@@ -17,6 +17,10 @@
 * [Visuals](#visuals)
 * [Versioning](#versioning)
 * [Technologies](#technologies)
+* [Getting Started](#getting-started)
+* [Deployment on GitHub Pages](#deployment)
+* [The Model & Inference Modes](#model-inference)
+* [Project Structure](#project-structure)
 * [Bibliography](#bibliography)
  
 <a name="description"></a>
@@ -26,6 +30,8 @@ This project stems from inspiration found in the `Generative Methods` subject at
 The dataset was created through web scraping and subsequently modified and cleaned. All training images were *128x64*px and in `.png` format.
 
 The images were categorized into different classes based on their type. The training set comprised `2328 images`.
+
+Since **Version 2.0**, the website is no longer a plain HTML/CSS/JS page: it has been rebuilt from scratch as a modern **single-page application** (Vite + React + TypeScript + Tailwind CSS) with a full redesign, while keeping the exact same model running **100% in the browser** — your images never leave your device.
  
 [Go up⬆️](#top)
 
@@ -221,6 +227,33 @@ Future Improvements:
 -   A loading circle animation is added to help with user waiting.
 -   The name of the project needed to be changed, so it was corrected in this issue: ([#56](https://github.com/Pikeras72/LegofyNet/issues/56)).
 
+#### <Update [12/06/2026]>
+
+**Version 2.0** is here! 🚀 The web app has been completely rebuilt from scratch:
+
+-   Migrated from plain HTML/CSS/JS to **Vite + React 19 + TypeScript (strict) + Tailwind CSS v4**, with a brand-new dark sci-fi "AI lab" design (glassmorphism, neon glow, particle field, animated grid backgrounds) and a new original LegofyNet logo + SVG favicon.
+-   New SPA routes via hash routing (GitHub Pages friendly, survives hard refresh): `#/generator`, `#/classes`, `#/classes/:id`, `#/gallery`, `#/about`, `#/terms` and a custom 404 page.
+-   The 23 per-class HTML pages were replaced by a single **Generator** with a searchable class selector (grouped by category), so switching classes no longer reloads the model.
+-   Real in-browser inference now lives behind a clean **`InferenceEngine` abstraction** with two implementations: the real TensorFlow.js engine and a mock engine for UI development (`VITE_INFERENCE_ENGINE=mock`). A future remote-API engine can be plugged in without touching the UI.
+-   The model (~125 MB) is **lazy-loaded only on the generator page**, with a real download progress bar, GPU shader warm-up, and an automatic WebGL→CPU fallback with a visible warning banner.
+-   New generator UX: drag&drop with file-type and 10 MB size validation, upload preview, block-assembly loading animation, **before/after comparison slider** (keyboard accessible), crisp/smooth rendering toggle, and PNG download at 4×/8×.
+-   Class detail pages show category, description and the literal **one-hot vector** each class feeds the model. The exact training class order is preserved in `src/data/classes.ts` and guarded by a dev-time assertion.
+-   Gallery rebuilt with lightbox; About page merges the old About/Credits/The Model/FAQ pages (architecture diagrams included); Terms ported to its own route.
+-   Accessibility pass: keyboard navigation, visible focus states, aria-live status messages, `prefers-reduced-motion` support.
+-   Deployment automated with a **GitHub Actions workflow** (`.github/workflows/deploy.yml`); assets renamed and migrated to `public/`; verified end-to-end with a real browser (routes, model download, real generation, downloads, error states).
+
+ Weak points:
+
+-   The ~125 MB model download makes the first generator visit heavy on slow connections (it is cached by the browser afterwards).
+-   The output resolution is fixed at 64×128 (the training resolution); the input is stretched without preserving aspect ratio, mirroring the training pipeline.
+-   WebGL is effectively required for fast generations; the CPU fallback works but is slower, and low-memory mobile GPUs may fail to allocate the weights.
+  
+Future Improvements:
+
+-   Optional aspect-preserving crop mode for the input image.
+-   Lighter/quantized model weights to reduce the first-load download.
+-   Optional remote inference API engine as an alternative to the in-browser model.
+
 [Go up⬆️](#top)
 
 ---
@@ -230,22 +263,130 @@ Future Improvements:
 
 `TensorFlow`, `TensorFlow.Keras` and `TensorFlow.js` for the model training, the model structure and implementing the model in the web page.
 
-`HTML`, `CSS` and `JavaScript` for the web page design and functionality.
+`Vite`, `React` and `TypeScript` for the web app architecture, build tooling and type-safe codebase (since v2.0).
 
-`Github Pages` for hosting the web page.
+`Tailwind CSS`, `Framer Motion` and `lucide-react` for the design system, animations and iconography (since v2.0).
+
+`React Router` (HashRouter) for client-side routing compatible with GitHub Pages (since v2.0).
+
+`HTML`, `CSS` and `JavaScript` for the original web page design and functionality (v0.1–v1.0).
+
+`Github Pages` for hosting the web page, now deployed automatically through `GitHub Actions`.
 
 `ChatGPT-3.5` for the initial structure (HTML, CSS and JS) of the web page, the implementation of the model via `TensorFlow.js` in the web page and questions during the development of the project.
 
-`Image Creator` on Bing for 'Star Wars' related AI images used on the website and the logo creation.
+`Claude Code` for the complete v2.0 rebuild of the web app.
 
-`Rive` for the animation of the model explanation.
+`Image Creator` on Bing for 'Star Wars' related AI images used on the website and the original logo creation.
+
+`Rive` for the animation of the model explanation (used in v0.6–v1.0).
+
+[Go up⬆️](#top)
+
+---
+
+<a name="getting-started"></a>
+### 5. Getting Started
+
+Requires `Node.js >= 20.9`.
+
+```bash
+npm install        # install dependencies
+npm run dev        # dev server at http://localhost:5173
+npm run typecheck  # TypeScript check only
+npm run build      # typecheck + production build into dist/
+npm run preview    # serve the production build locally
+```
+
+By default the generator uses the real model. For UI development without downloading the ~125 MB weights, copy [`.env.example`](.env.example) to `.env.local` and set:
+
+```bash
+VITE_INFERENCE_ENGINE=mock
+```
+
+The UI shows a "Demo mode" banner whenever the mock engine is active.
+
+[Go up⬆️](#top)
+
+---
+
+<a name="deployment"></a>
+### 6. Deployment on GitHub Pages
+
+The repository ships a workflow at [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) that builds and deploys automatically on every push to `main`.
+
+**One-time setup:** in the repository settings, set **Settings → Pages → Build and deployment → Source = "GitHub Actions"**.
+
+Because the app uses a relative base (`base: './'` in [`vite.config.ts`](vite.config.ts)) together with hash routing, the same build works at `https://<user>.github.io/<any-repo-name>/` with no configuration changes.
+
+[Go up⬆️](#top)
+
+---
+
+<a name="model-inference"></a>
+### 7. The Model & Inference Modes
+
+**Model I/O:** input image `[1, 128, 64, 3]` (normalized to [0,1]) + one-hot class vector `[1, 22]` → 3 outputs, where **output index 2** is the generated `[128, 64, 3]` image. The weights live in `public/model/` (`model.json` + 32 binary shards, ~125 MB) and are downloaded by the browser only when the generator page is opened.
+
+⚠️ The class order in [`src/data/classes.ts`](src/data/classes.ts) (`CLASS_LABEL_ORDER`) **is the training order** — positions 11–16 are intentionally non-alphabetical. Never sort or reorder it; a dev-time assertion guards against drift.
+
+The UI talks to an `InferenceEngine` interface ([`src/services/inference/types.ts`](src/services/inference/types.ts)) and never touches tensors directly:
+
+-   **`tfjs`** (default) — [`src/services/inference/tfjsEngine.ts`](src/services/inference/tfjsEngine.ts): real in-browser inference. Lazily imports TensorFlow.js, reports download progress, warms up the GPU shaders, and runs predictions inside `tf.tidy` (no tensor leaks).
+-   **`mock`** — [`src/services/inference/mockEngine.ts`](src/services/inference/mockEngine.ts): clearly-labeled fake engine for UI development.
+-   **Remote API (future)** — implement `InferenceEngine` in a new `apiEngine.ts` and select it in [`src/services/inference/index.ts`](src/services/inference/index.ts). No UI changes needed.
+
+#### Adding or editing classes
+
+Class metadata lives in [`src/data/classes.ts`](src/data/classes.ts):
+
+```ts
+{
+  id: 'yoda',                        // slug used in routes and ?class= params
+  name: 'Yoda',                      // exact training label
+  modelIndex: 20,                    // one-hot index — must match training order
+  category: 'jedi',                  // jedi | sith | imperial | resistance | warrior | species
+  image: 'images/classes/yoda.jpg',  // preview under public/
+  description: '…',
+}
+```
+
+Supporting a *new* class requires retraining/exporting the model with the extra label, adding its preview image under `public/images/classes/`, and appending it to both `CLASS_LABEL_ORDER` and `CHARACTER_CLASSES` (keeping indices aligned).
+
+#### Replacing the model
+
+1.  Export your Keras model with [tfjs-converter](https://www.tensorflow.org/js/guide/conversion) (layers format).
+2.  Replace the contents of `public/model/`.
+3.  If the input geometry changes, update `MODEL_INPUT_WIDTH` / `MODEL_INPUT_HEIGHT` in [`src/services/inference/imageUtils.ts`](src/services/inference/imageUtils.ts).
+4.  If the output head changes, adjust the output index in [`src/services/inference/tfjsEngine.ts`](src/services/inference/tfjsEngine.ts) (currently `outputs[2]`).
+
+[Go up⬆️](#top)
+
+---
+
+<a name="project-structure"></a>
+### 8. Project Structure
+
+```
+public/
+  model/              # TF.js weights (model.json + 32 shards, ~125 MB)
+  images/             # class previews, gallery, diagrams, team
+src/
+  data/               # classes (training order!), faq, gallery, team
+  services/inference/ # engine interface + tfjs/mock implementations
+  hooks/              # useGenerator state machine, utilities
+  components/         # ui primitives, layout, per-page components
+  pages/              # one component per route
+  layouts/            # RootLayout (navbar + footer)
+.github/workflows/    # GitHub Pages deploy workflow
+```
 
 [Go up⬆️](#top)
 
 ---
 
 <a name="bibliography"></a>
-### 5. Bibliography
+### 9. Bibliography
 
 Isola, P., Zhu, J. Y., Zhou, T., & Efros, A. A. (2016). [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004). arXiv.
 
@@ -269,4 +410,3 @@ Brownlee, J. (2021, April 29). [How to Implement Pix2Pix GAN Models From Scratch
 
 - [emil-pintilie](https://github.com/emil-pintilie)
 - [ManuelDobladoBueno](https://github.com/ManuelDobladoBueno)
-
